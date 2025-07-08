@@ -6,11 +6,11 @@ import HeaderDashboard from './HeaderDashboard'
 const {Content} = Layout;
 const MainLayout = () => {
   return (
-    <Layout>
+    <Layout style={{height: "100vh"}}>
       <Sidebar />
       <Layout>
         <HeaderDashboard />
-        <Content />
+        <Content style={{margin: 10}} className='overflow-y-scroll'/>
       </Layout>
     </Layout>
   )
