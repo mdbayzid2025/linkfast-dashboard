@@ -7,7 +7,7 @@ const { Option } = Select;
 const SaleChart = () => {
 
     return (
-        <div className='bg-white !py-10 rounded-xl'>
+        <div className='bg-white py-10 rounded-xl'>
             <div className="flex items-center justify-between px-10 mb-4">
                 <h1 className='text-xl font-bold'>Total Quotes <span className='font-normal'>Statistics</span> </h1>
                 <Select defaultValue="2022" size='middle' className='w-[100px]'>
@@ -18,7 +18,7 @@ const SaleChart = () => {
                     <Option value="2026">2026</Option>
                 </Select>
             </div>
-            <ResponsiveContainer width="100%" height={400}>
+            <ResponsiveContainer width="100%" height={350}>
                 <BarChart
                     data={salesChartData}
                     margin={{

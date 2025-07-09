@@ -8,37 +8,33 @@ const DashboardStats = () => {
         {
             name: "Total Sale",
             total: 1000,
-            icon: <FiBox size={40} />,
-            bgColor: "brown"
+            icon: <FiBox size={100} className='text-white/50' />,
+            bgColor: "#FDDD8D"
         },
         {
             name: "Total Income",
             total: 1000,
-            icon: <FaDollarSign size={40} />,
-            bgColor: "purple"
+            icon: <FaDollarSign size={100} className='text-white/50' />,
+            bgColor: "#FBD9E2"
         },
         {
             name: "Total Share",
             total: 1000,
-            icon: <LuShare2 size={40} />,
-            bgColor: "darkblue"
+            icon: <LuShare2 size={100} className='text-white/50' />,
+            bgColor: "#C6E9F2"
         },
     ]
     return (
-        <div className='grid grid-cols-3 gap-14 !mb-10'>
+        <div className='grid grid-cols-3 gap-8 mb-10'>
+
             {
                 statsData.map(item =>
-                    <div style={{backgroundColor : `${item.bgColor}`}} key={item.name} className='!p-6  shadow-lg rounded-xl'>
-                        <div className="flex items-center justify-between gap-3 p-10">
-                            <div className="w-18 h-18 bg-[#009A54] rounded-lg text-white flex items-center justify-center">
-                                {item.icon}
+                    <div style={{ backgroundColor: `${item.bgColor}` }} key={item.name} className='p-6  shadow-lg rounded-xl'>                        
+                            <div className="flex items-center justify-between w-full">
+                                <h1 className="text-[70px] text-[#404E67] font-semibold">{item.total}</h1>
+                                <>{item.icon}</>
                             </div>
-                            <div className="">
-                                <h1 className='text-2xl text-white/60 font-medium'>{item.name}</h1>
-                                <h1 className="text-5xl text-white f">{item.total}</h1>
-                            </div>
-                        </div>
-
+                            <h1 className='text-3xl tracking-wide text text-[#404E67] font-medium'>{item.name}</h1>
                     </div>)
             }
 
