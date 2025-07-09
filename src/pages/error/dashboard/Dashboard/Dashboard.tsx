@@ -1,8 +1,13 @@
 import React from 'react'
+import DashboardStats from './DashboardStats'
+import SaleChart from './SaleChart'
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div>
+      <DashboardStats />
+      <SaleChart />
+    </div>
   )
 }
 

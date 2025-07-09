@@ -2,7 +2,7 @@
 
 @import "tailwindcss";
 
-* {
+body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -34,3 +34,23 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #f6f6f6;
 }   
+
+.transactionTable .ant-table-thead >tr>th {
+  background-color: #009A54 !important; /* A custom light blue for this table */
+  color: #ffffff !important; /* White text for better contrast */
+}
+
+.transactionTable .ant-table-container table>thead>tr:first-child >*:first-child{
+  border-top-left-radius: 15px!important;
+}
+
+
+.transactionTable .ant-table-container table > thead > tr:last-child > *:last-child {
+  border-top-right-radius: 15px !important; /* Adjusted to specify the corner */
+  /* Use the specific border-radius property for clarity */
+}
+
+.userTransactionsTable .ant-table-thead >tr>th{
+  background-color: #fafafa !important; /* A custom light blue for this table */  
+  color: black !important;
+}

@@ -2,6 +2,7 @@ import { Layout } from 'antd'
 import React from 'react'
 import Sidebar from './Sidebar'
 import HeaderDashboard from './HeaderDashboard'
+import { Outlet } from 'react-router-dom';
 
 const {Content} = Layout;
 const MainLayout = () => {
@@ -10,7 +11,9 @@ const MainLayout = () => {
       <Sidebar />
       <Layout>
         <HeaderDashboard />
-        <Content style={{margin: 10}} className='overflow-y-scroll'/>
+        <Content style={{margin: 24}} className='overflow-y-scroll'>
+          <Outlet />
+        </Content>
       </Layout>
     </Layout>
   )
