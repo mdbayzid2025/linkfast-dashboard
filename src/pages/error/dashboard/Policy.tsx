@@ -1,7 +1,7 @@
 import JoditEditor from 'jodit-react';
 import React, { useMemo, useRef, useState } from 'react'
 
-const About = ({placeholder} : any) => {
+const Policy = ({placeholder} : any) => {
   const editor = useRef(null);
   const [content, setContent] = useState('');
 
@@ -14,7 +14,7 @@ const About = ({placeholder} : any) => {
 
   return (
     <div className='bg-white p-4 rounded-2xl'>
-       <h1 className="text-2xl text-[#009A54] py-6 font-semibold">About Us</h1>
+       <h1 className="text-2xl text-[#009A54] py-6 font-semibold">Policy</h1>
       <JoditEditor
         
         ref={editor}
@@ -29,4 +29,4 @@ const About = ({placeholder} : any) => {
   )
 }
 
-export default About
+export default Policy

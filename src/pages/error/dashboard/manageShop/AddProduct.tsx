@@ -19,7 +19,7 @@ export type ProductFormData = {
 type AddProductModalProps = {
     open: boolean;
     setOpen: (open: boolean) => void;
-    editData: any | null;
+    editData?: any | null;
     setEditData: (data: any | null) => void;
 };
 

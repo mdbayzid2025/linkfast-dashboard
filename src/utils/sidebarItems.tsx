@@ -1,109 +1,126 @@
-import { IoBarChartOutline } from "react-icons/io5";
+import {
+  DashboardOutlined,
+  ShopOutlined,
+  SettingOutlined,
+  FileTextOutlined,
+  EditOutlined,
+  AppstoreOutlined,
+  InfoCircleOutlined,
+  LockOutlined,
+  ContactsOutlined,
+  SafetyCertificateOutlined,
+  QuestionCircleOutlined,
+  ReadOutlined,
+  UserOutlined,
+  TeamOutlined,
+} from "@ant-design/icons";
+
 import type { TSidebarItem } from "./generateSidebarItems";
 
 export const sidebarItems: TSidebarItem[] = [
-    {
-        key: "dashboard",
-        label: "Dashboard",
-        path: "",
-        icon: <IoBarChartOutline size={24} />,
-    },
-    {
-        key: "transaction-details",
-        label: "Transaction Details",
-        path: "transaction-details",
-        icon: <IoBarChartOutline size={24} />,
-    },
-    {
-        key: "manage-shop",
-        label: "Manage Shop",
-        path: "manage-shop",
-        icon: <IoBarChartOutline size={24} />,
-    },
-    {
-        key: "settings",
-        label: "Settings",
-        path: "settings",
-        icon: <IoBarChartOutline size={24} />,
-        children: [
-            {
-                key: "header-news",
-                label: "Header News",
-                icon: <IoBarChartOutline size={24} />,
-                path: "header-news",
-            },
-            {
-                key: "slider",
-                label: "Slider",
-                icon: <IoBarChartOutline size={24} />,
-                path: "slider",
-
-            },
-            {
-                key: "set-local-sim",
-                label: "Set Local Sim",
-                icon: <IoBarChartOutline size={24} />,
-                path: "set-local-sim",
-            },
-            {
-                key: "why-use",
-                label: "Why Use",
-                icon: <IoBarChartOutline size={24} />,
-                path: "why-use",
-            },
-            {
-                key: "set-reviews",
-                label: "Set Reviews",
-                icon: <IoBarChartOutline size={24} />
-            },
-            {
-                key: "about",
-                label: "About",
-                icon: <IoBarChartOutline size={24} />,
-                path: "about",
-            },
-            {
-                key: "terms",
-                label: "Terms",
-                icon: <IoBarChartOutline size={24} />,
-                path: "terms",
-            },
-            {
-                key: "contact",
-                label: "Contact",
-                icon: <IoBarChartOutline size={24} />,
-                path: "contact",
-            },
-            {
-                key: "policy",
-                label: "Policy",
-                icon: <IoBarChartOutline size={24} />,
-                path: "policy",
-            },
-            {
-                key: "faq",
-                label: "FAQ",
-                icon: <IoBarChartOutline size={24} />,
-                path: "faq",
-            },
-            {
-                key: "blogs",
-                label: "Blog",
-                icon: <IoBarChartOutline size={24} />,
-                path: "blogs",
-            },
-        ]
-    },
-    {
-        key: "user-list",
-        label: "User List",
-        path: "user-list",
-        icon: <IoBarChartOutline size={24} />,
-    },
-    {
-        key: "all-admin",
-        label: "All Admin",
-        path: "all-admin",
-        icon: <IoBarChartOutline size={24} />,
-    },   
-]
+  {
+    key: "dashboard",
+    label: "Dashboard",
+    path: "",
+    icon: <DashboardOutlined style={{ fontSize: '24px'}}/>,
+  },
+  {
+    key: "transaction-details",
+    label: "Transaction Details",
+    path: "transaction-details",
+    icon: <FileTextOutlined style={{ fontSize: '24px'}}/>,
+  },
+  {
+    key: "manage-shop",
+    label: "Manage Shop",
+    path: "manage-shop",
+    icon: <ShopOutlined style={{ fontSize: '24px'}}/>,
+  },
+  {
+    key: "user-list",
+    label: "User List",
+    path: "user-list",
+    icon: <UserOutlined style={{ fontSize: '24px'}}/>,
+  },
+  {
+    key: "all-admin",
+    label: "All Admin",
+    path: "all-admin",
+    icon: <TeamOutlined style={{ fontSize: '24px'}}/>,
+  },
+  {
+    key: "settings",
+    label: "Settings",
+    path: "settings",
+    icon: <SettingOutlined style={{ fontSize: '24px'}}/>,
+    children: [
+      {
+        key: "header-news",
+        label: "Header News",
+        icon: <EditOutlined style={{ fontSize: '24px'}}/>,
+        path: "header-news",
+      },
+      {
+        key: "slider",
+        label: "Slider",
+        icon: <AppstoreOutlined style={{ fontSize: '24px'}}/>,
+        path: "slider",
+      },
+      {
+        key: "set-local-sim",
+        label: "Set Local Sim",
+        icon: <ShopOutlined style={{ fontSize: '24px'}}/>,
+        path: "set-local-sim",
+      },
+      {
+        key: "why-use",
+        label: "Why Use",
+        icon: <InfoCircleOutlined style={{ fontSize: '24px'}}/>,
+        path: "why-use",
+      },
+      {
+        key: "set-reviews",
+        label: "Set Reviews",
+        icon: <EditOutlined style={{ fontSize: '24px'}}/>,
+        path: "set-reviews",
+      },
+      {
+        key: "about",
+        label: "About",
+        icon: <InfoCircleOutlined style={{ fontSize: '24px'}}/>,
+        path: "about",
+      },
+      {
+        key: "terms",
+        label: "Terms",
+        icon: <LockOutlined style={{ fontSize: '24px'}}/>,
+        path: "terms",
+      },
+      {
+        key: "contact",
+        label: "Contact",
+        icon: <ContactsOutlined style={{ fontSize: '24px'}}/>,
+        path: "contact",
+      },
+      {
+        key: "policy",
+        label: "Policy",
+        icon: <SafetyCertificateOutlined style={{ fontSize: '24px'}}/>,
+        path: "policy",
+      },
+      {
+        key: "faq",
+        label: "FAQ",
+        icon: <QuestionCircleOutlined style={{ fontSize: '24px'}}/>,
+        path: "faq",
+      },
+      {
+        key: "blogs",
+        label: "Blog",
+        icon: <ReadOutlined style={{ fontSize: '24px'}}/>,
+        path: "blogs",
+      },
+    ],
+  },
+  
+];

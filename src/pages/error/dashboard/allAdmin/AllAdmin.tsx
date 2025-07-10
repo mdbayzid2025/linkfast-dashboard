@@ -3,10 +3,11 @@ import { Button, Input, Table, Tag } from 'antd';
 import { useState } from 'react';
 import { FaRegTrashAlt } from 'react-icons/fa';
 import CustomDeleteModal from '../../../../components/shared/CustomDeleteModal';
-import { usersWithTransactions } from '../../../../data/UsersWithTransactionData';
+
 
 import { FiInfo } from 'react-icons/fi';
 import UserDetailsModal from '../userList/UserDetailsModal';
+import { adminData } from '../../../../data/AdminData';
 
 
 const AllAdmin = () => {
@@ -27,8 +28,9 @@ const AllAdmin = () => {
   const userColumns = [
     { title: 'Name', dataIndex: 'name', key: 'name' },
     { title: 'Email', dataIndex: 'email', key: 'email' },
+    { title: 'Role', dataIndex: 'role', key: 'role' },
     { title: 'Contact', dataIndex: 'contact', key: 'contact' },
-    { title: 'Country', dataIndex: 'country', key: 'country' },
+    { title: 'Status', dataIndex: 'status', key: 'status' },
     {
       title: 'Actions',
       render: (_: any, record: any) => (
@@ -54,11 +56,6 @@ const AllAdmin = () => {
     },
   ];
 
-  const filteredUsers = usersWithTransactions.filter((user) =>
-    user.name.toLowerCase().includes(searchText.toLowerCase()) ||
-    user.email.toLowerCase().includes(searchText.toLowerCase()) ||
-    user.contact.includes(searchText)
-  );
 
     const rowSelection = {
     selectedRowKeys,
@@ -101,7 +98,7 @@ const AllAdmin = () => {
 
       <Table
         columns={userColumns}
-        dataSource={filteredUsers}        
+        dataSource={adminData}        
         pagination={{ pageSize: 5 }}
         rowSelection={{ type: "checkbox", ...rowSelection }}
         className='transactionTable px-4'

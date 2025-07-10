@@ -106,11 +106,12 @@ const Sidebar = () => {
             items={sidebarItemGenerator(sidebarItems)}
             style={{ flexGrow: 1, overflowY: "auto" }}
           />
-
+          <Link to="/login" >
           <Button
             type="primary"
             // icon={}
             style={{
+              width: "100%",
               marginTop: "auto",
               border: "none",
               outline: "none",
@@ -124,11 +125,13 @@ const Sidebar = () => {
               paddingBlock: "20px",
               fontWeight: "400",
               fontSize: "16px",
+              borderTop: "1px solid #ededed"
             }}
           >
             <TbLogout size={24} />
             Logout
           </Button>
+          </Link>
         </div>
       </Sider>
     </ConfigProvider>

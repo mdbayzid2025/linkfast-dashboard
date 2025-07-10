@@ -11,6 +11,9 @@ import TransactionDetails from "../pages/error/dashboard/transactionDetails/Tran
 import ManageShop from "../pages/error/dashboard/manageShop/ManageShop";
 import UserList from "../pages/error/dashboard/userList/UsersList";
 import AllAdmin from "../pages/error/dashboard/allAdmin/AllAdmin";
+import Policy from "../pages/error/dashboard/Policy";
+import FAQ from "../pages/error/dashboard/FAQ/FAQ";
+import Slider from "../pages/error/dashboard/Slider/Slider";
 
 const router = createBrowserRouter([
     {
@@ -18,15 +21,19 @@ const router = createBrowserRouter([
         element: <App />,
         errorElement: <ErrorPage />,
         children: [
-            { path: "", element: <Dashboard /> },            
+            { path: "", element: <Dashboard /> },
             { path: "transaction-details", element: <TransactionDetails /> },
             { path: "manage-shop", element: <ManageShop /> },
             { path: "user-list", element: <UserList /> },
             { path: "all-admin", element: <AllAdmin /> },
-            { path: "blogs", element: <Blogs />},
-            { path: "about", element: <About />},
-            { path: "terms", element: <Tarms />},
-            { path: "contact", element: <Contact />}
+            { path: "blogs", element: <Blogs /> },
+            { path: "about", element: <About /> },
+            { path: "policy", element: <Policy /> },
+            { path: "faq", element: <FAQ /> },
+            { path: "about", element: <About /> },
+            { path: "terms", element: <Tarms /> },
+            { path: "contact", element: <Contact /> },
+            { path: "slider", element: <Slider /> }
         ]
     },
     {
