@@ -45,7 +45,7 @@ const AddReviewModal = ({ open, setOpen, editData, setEditData, reviews, setRevi
     >
       <Form form={form} layout="vertical" onFinish={onFinish}>
         <Form.Item name="name" label="Name" rules={[{ required: true, message: "Enter reviewer name" }]}>
-          <Input placeholder="Enter name" />
+          <Input style={{height: 42}} placeholder="Enter name" />
         </Form.Item>
 
         <Form.Item name="review" label="Review" rules={[{ required: true, message: "Enter review" }]}>
@@ -57,15 +57,15 @@ const AddReviewModal = ({ open, setOpen, editData, setEditData, reviews, setRevi
         </Form.Item>
 
         <Form.Item name="status" label="Status" rules={[{ required: true, message: "Select status" }]}>
-          <Select placeholder="Select status">
-            <Select.Option value="Pending">Pending</Select.Option>
-            <Select.Option value="Accepted">Accepted</Select.Option>
-            <Select.Option value="Rejected">Rejected</Select.Option>
+          <Select style={{height: 42}} placeholder="Select status">
+            <Select.Option style={{height:42}} value="Pending">Pending</Select.Option>
+            <Select.Option style={{height:42}} value="Accepted">Accepted</Select.Option>
+            <Select.Option style={{height:42}} value="Rejected">Rejected</Select.Option>
           </Select>
         </Form.Item>
 
         <div className="text-center">
-          <Button type="primary" htmlType="submit">{editData ? "Update" : "Add"}</Button>
+          <Button type="primary" size='large' htmlType="submit">{editData ? "Update" : "Add"}</Button>
         </div>
       </Form>
     </Modal>

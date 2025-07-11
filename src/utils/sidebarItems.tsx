@@ -67,6 +67,12 @@ export const sidebarItems: TSidebarItem[] = [
         path: "slider",
       },
       {
+        key: "affiliate-marketting",
+        label: "Affiliate Marketting",
+        icon: <ShopOutlined style={{ fontSize: '24px'}}/>,
+        path: "affiliate-marketting",
+      },
+      {
         key: "set-local-sim",
         label: "Set Local Sim",
         icon: <ShopOutlined style={{ fontSize: '24px'}}/>,

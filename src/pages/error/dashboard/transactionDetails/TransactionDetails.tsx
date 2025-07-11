@@ -1,11 +1,9 @@
-import React, { useState } from 'react'
-import { transactionData } from '../../../../data/TransactionData'
-import { FiSearch } from 'react-icons/fi'
-import { Input, Table } from 'antd'
 import { SearchOutlined } from '@ant-design/icons'
+import { Input, Table } from 'antd'
+import { transactionData } from '../../../../data/TransactionData'
 
 const TransactionDetails = () => {
-  const [selectedRowKeys, setSelectedRowKeys] = useState()
+  
   const tableComuln  = [
     {title: "Name", dataIndex : "name", key:"name"},
     {title: "Price", dataIndex : "price", key:"price"},
@@ -16,12 +14,7 @@ const TransactionDetails = () => {
     {title: "Transaction ID.", dataIndex : "transactionId", key:"transactionId"},
   ]
 
-     const rowSelection = {
-        selectedRowKeys,
-        onChange: (selectedKeys: any) => {
-            setSelectedRowKeys(selectedKeys);
-        },
-    };
+
 
   return (
     <div className='bg-white  rounded-xl'>
@@ -53,7 +46,7 @@ const TransactionDetails = () => {
 
           </div>
       </div>
-      <Table dataSource={transactionData} columns={tableComuln} size="large" rowSelection={{type: "checkbox", ...rowSelection}}
+      <Table dataSource={transactionData} columns={tableComuln} size="large" 
       pagination={{
         pageSize: 10,        
       }} className='transactionTable px-4 pt-4'

@@ -1,7 +1,8 @@
 export const usersWithTransactions = [
   {
     key: '1',
-    name: 'Bayzid Bostami',
+    name: 'Bayzid Bostami',    
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     email: 'bayzid@example.com',
     contact: '01711-123456',
     country: 'Bangladesh',
@@ -10,6 +11,7 @@ export const usersWithTransactions = [
   {
     id: 'TXN1003',
     simName: 'eSIM Travel Lite',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     network: 'Airtel',
     price: '$10',
     validity: '7 Days',
@@ -19,6 +21,7 @@ export const usersWithTransactions = [
   {
     id: 'TXN1004',
     simName: 'eSIM Global Max',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     network: 'T-Mobile',
     price: '$30',
     validity: '90 Days',
@@ -28,6 +31,7 @@ export const usersWithTransactions = [
   {
     id: 'TXN1005',
     simName: 'eSIM Asia Pack',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     network: 'Banglalink',
     price: '$18',
     validity: '30 Days',
@@ -37,6 +41,7 @@ export const usersWithTransactions = [
   {
     id: 'TXN1006',
     simName: 'eSIM Basic',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     network: 'Robi',
     price: '$8',
     validity: '5 Days',
@@ -46,6 +51,7 @@ export const usersWithTransactions = [
   {
     id: 'TXN1007',
     simName: 'eSIM USA Unlimited',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     network: 'AT&T',
     price: '$40',
     validity: '60 Days',
@@ -55,6 +61,7 @@ export const usersWithTransactions = [
   {
     id: 'TXN1008',
     simName: 'eSIM Europe Connect',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     network: 'Vodafone',
     price: '$22',
     validity: '45 Days',
@@ -64,6 +71,7 @@ export const usersWithTransactions = [
   {
     id: 'TXN1009',
     simName: 'eSIM Canada Plus',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     network: 'Rogers',
     price: '$26',
     validity: '30 Days',
@@ -73,6 +81,7 @@ export const usersWithTransactions = [
   {
     id: 'TXN1010',
     simName: 'eSIM Middle East',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     network: 'Etisalat',
     price: '$20',
     validity: '30 Days',
@@ -82,6 +91,7 @@ export const usersWithTransactions = [
   {
     id: 'TXN1011',
     simName: 'eSIM Premium',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     network: 'Grameenphone',
     price: '$35',
     validity: '60 Days',
@@ -93,6 +103,7 @@ export const usersWithTransactions = [
   {
     key: '2',
     name: 'John Doe',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     email: 'john@example.com',
     contact: '01812-445566',
     country: 'USA',
@@ -101,6 +112,7 @@ export const usersWithTransactions = [
       {
         id: 'TXN2001',
         simName: 'Global SIM',
+        photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
         network: 'T-Mobile',
         price: '$25',
         validity: '60 Days',

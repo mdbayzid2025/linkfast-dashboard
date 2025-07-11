@@ -38,12 +38,6 @@ const ManageShop = () => {
     },
   ]
 
-  const rowSelection = {
-    selectedRowKeys,
-    onChange: (selectedKeys: any) => {
-      setSelectedRowKeys(selectedKeys);
-    },
-  };
 
   const handleDelete = () => {
     console.log("Product deleted!");    
@@ -73,9 +67,7 @@ const ManageShop = () => {
                     padding: "6px",
                     backgroundColor: "#B7DBC9",
                   }}
-
                 />
-
               }
             />
 
@@ -84,7 +76,7 @@ const ManageShop = () => {
         </div>
 
       </div>
-      <Table dataSource={productData} columns={tableComuln} size="large" rowSelection={{ type: "checkbox", ...rowSelection }}
+      <Table dataSource={productData} columns={tableComuln} size="large" 
         pagination={{
           pageSize: 10,
         }}

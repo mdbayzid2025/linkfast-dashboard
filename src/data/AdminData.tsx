@@ -2,6 +2,7 @@ export const adminData = [
   {
     id: 'ADM1001',
     name: 'Md. Bayzid',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     email: 'bayzid@example.com',
     role: 'Super Admin',
     contact: '01711112222',
@@ -11,6 +12,7 @@ export const adminData = [
   {
     id: 'ADM1002',
     name: 'Sarah Akter',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     email: 'sarah.akter@example.com',
     role: 'Admin',
     contact: '01822223333',
@@ -20,6 +22,7 @@ export const adminData = [
   {
     id: 'ADM1003',
     name: 'Rakib Hasan',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     email: 'rakib@example.com',
     role: 'Editor',
     contact: '01933334444',
@@ -29,6 +32,7 @@ export const adminData = [
   {
     id: 'ADM1004',
     name: 'Tanvir Islam',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     email: 'tanvir@example.com',
     role: 'Moderator',
     contact: '01644445555',
@@ -38,6 +42,7 @@ export const adminData = [
   {
     id: 'ADM1005',
     name: 'Nusrat Jahan',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     email: 'nusrat@example.com',
     role: 'Admin',
     contact: '01755556666',
@@ -47,6 +52,7 @@ export const adminData = [
   {
     id: 'ADM1006',
     name: 'Hasan Mahmud',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     email: 'hasan@example.com',
     role: 'Editor',
     contact: '01866667777',
@@ -56,6 +62,7 @@ export const adminData = [
   {
     id: 'ADM1007',
     name: 'Sadia Karim',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     email: 'sadia@example.com',
     role: 'Admin',
     contact: '01977778888',
@@ -65,6 +72,7 @@ export const adminData = [
   {
     id: 'ADM1008',
     name: 'Jamal Uddin',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     email: 'jamal@example.com',
     role: 'Super Admin',
     contact: '01688889999',
@@ -74,6 +82,7 @@ export const adminData = [
   {
     id: 'ADM1009',
     name: 'Farzana Mim',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     email: 'farzana@example.com',
     role: 'Moderator',
     contact: '01799990000',
@@ -83,6 +92,7 @@ export const adminData = [
   {
     id: 'ADM1010',
     name: 'Imran Hossain',
+    photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
     email: 'imran@example.com',
     role: 'Admin',
     contact: '01800001111',

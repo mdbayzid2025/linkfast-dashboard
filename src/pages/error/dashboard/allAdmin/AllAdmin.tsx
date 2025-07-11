@@ -1,13 +1,13 @@
 import { SearchOutlined } from '@ant-design/icons';
-import { Button, Input, Table, Tag } from 'antd';
+import { Input, Table } from 'antd';
 import { useState } from 'react';
 import { FaRegTrashAlt } from 'react-icons/fa';
 import CustomDeleteModal from '../../../../components/shared/CustomDeleteModal';
 
 
 import { FiInfo } from 'react-icons/fi';
-import UserDetailsModal from '../userList/UserDetailsModal';
 import { adminData } from '../../../../data/AdminData';
+import UserDetailsModal from '../userList/UserDetailsModal';
 
 
 const AllAdmin = () => {
@@ -17,8 +17,7 @@ const AllAdmin = () => {
   const [selectedUser, setSelectedUser] = useState<any>(null);
 
   const [selectedUserData, setSelectedUserData] = useState<any>(null);
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);  
   
   const handleDelete = () => {
     console.log("Deleting user:", selectedUser);
@@ -26,7 +25,15 @@ const AllAdmin = () => {
   };
 
   const userColumns = [
-    { title: 'Name', dataIndex: 'name', key: 'name' },
+    { title: "Name", 
+      render: (_:any, record: any)=>(
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10">
+            <img src={record.photo} className="w-full h-full object-cover rounded-full" alt="" />            
+          </div>
+          <p className='text-[16px] font-medium'>{record.name}</p>
+        </div>
+      )},
     { title: 'Email', dataIndex: 'email', key: 'email' },
     { title: 'Role', dataIndex: 'role', key: 'role' },
     { title: 'Contact', dataIndex: 'contact', key: 'contact' },
@@ -57,12 +64,6 @@ const AllAdmin = () => {
   ];
 
 
-    const rowSelection = {
-    selectedRowKeys,
-    onChange: (selectedKeys: any) => {
-      setSelectedRowKeys(selectedKeys);
-    },
-  };
 
   return (
     <div className="bg-white rounded-xl">
@@ -96,12 +97,11 @@ const AllAdmin = () => {
         </div>
       </div>
 
-      <Table
+      <Table        
         columns={userColumns}
         dataSource={adminData}        
-        pagination={{ pageSize: 5 }}
-        rowSelection={{ type: "checkbox", ...rowSelection }}
-        className='transactionTable px-4'
+        pagination={{ pageSize: 5 }}        
+        className='transactionTable px-4'        
       />
 
       <CustomDeleteModal

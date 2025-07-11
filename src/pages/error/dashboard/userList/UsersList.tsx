@@ -1,11 +1,11 @@
 import { SearchOutlined } from '@ant-design/icons';
-import { Button, Input, Table, Tag } from 'antd';
+import { Input, Table } from 'antd';
 import { useState } from 'react';
 import { FaRegTrashAlt } from 'react-icons/fa';
+import { FiInfo } from 'react-icons/fi';
 import CustomDeleteModal from '../../../../components/shared/CustomDeleteModal';
 import { usersWithTransactions } from '../../../../data/UsersWithTransactionData';
 import UserDetailsModal from './UserDetailsModal';
-import { FiInfo } from 'react-icons/fi';
 
 
 const UsersList = () => {
@@ -23,7 +23,15 @@ const UsersList = () => {
   };
 
   const userColumns = [
-    { title: 'Name', dataIndex: 'name', key: 'name' },
+    { title: "Name", 
+      render: (_:any, record: any)=>(
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10">
+            <img src={record.photo} className="w-full h-full object-cover rounded-full" alt="" />            
+          </div>
+          <p className='text-[16px] font-medium'>{record.name}</p>
+        </div>
+      )},
     { title: 'Email', dataIndex: 'email', key: 'email' },
     { title: 'Contact', dataIndex: 'contact', key: 'contact' },
     { title: 'Country', dataIndex: 'country', key: 'country' },
@@ -58,12 +66,7 @@ const UsersList = () => {
     user.contact.includes(searchText)
   );
 
-    const rowSelection = {
-    selectedRowKeys,
-    onChange: (selectedKeys: any) => {
-      setSelectedRowKeys(selectedKeys);
-    },
-  };
+
 
   return (
     <div className="bg-white rounded-xl">
@@ -100,8 +103,7 @@ const UsersList = () => {
       <Table
         columns={userColumns}
         dataSource={filteredUsers}        
-        pagination={{ pageSize: 5 }}
-        rowSelection={{ type: "checkbox", ...rowSelection }}
+        pagination={{ pageSize: 5 }}        
         className='transactionTable px-4'
       />
 
