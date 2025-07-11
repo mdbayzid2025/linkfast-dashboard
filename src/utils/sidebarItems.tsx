@@ -79,10 +79,10 @@ export const sidebarItems: TSidebarItem[] = [
         path: "why-use",
       },
       {
-        key: "set-reviews",
-        label: "Set Reviews",
+        key: "reviews",
+        label: "Reviews",
         icon: <EditOutlined style={{ fontSize: '24px'}}/>,
-        path: "set-reviews",
+        path: "reviews",
       },
       {
         key: "about",

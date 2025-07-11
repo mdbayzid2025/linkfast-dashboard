@@ -63,7 +63,7 @@ const Sidebar = () => {
           itemSelectedBg: "#009A54",
           itemSelectedColor: "#ffffff",
           itemActiveBg: "#286a25",
-          itemBorderRadius: "10px" as any,
+          itemBorderRadius: "10px 0 10px 0" as any,
           itemHeight: 45,
           itemMarginBlock: 12,
         }

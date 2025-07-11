@@ -33,8 +33,8 @@ const SaleChart = () => {
                     <YAxis />
                     <Tooltip />
                     {/* <Legend /> */}
-                    <Bar  dataKey="saleTotal" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} />
-                    <Bar  dataKey="category" fill="#82ca9d" activeBar={<Rectangle fill="gold" stroke="purple" />} />
+                    <Bar barSize={30} dataKey="saleTotal" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} />
+                    <Bar barSize={30} dataKey="category" fill="#82ca9d" activeBar={<Rectangle fill="gold" stroke="purple" />} />
                 </BarChart>
             </ResponsiveContainer>
         </div>

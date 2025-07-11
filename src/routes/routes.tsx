@@ -14,6 +14,9 @@ import AllAdmin from "../pages/error/dashboard/allAdmin/AllAdmin";
 import Policy from "../pages/error/dashboard/Policy";
 import FAQ from "../pages/error/dashboard/FAQ/FAQ";
 import Slider from "../pages/error/dashboard/Slider/Slider";
+import HeaderNews from "../pages/error/dashboard/HeaderNews/HeaderNews";
+import WhyUse from "../pages/error/dashboard/WhyUse/WhyUser";
+import Reviews from "../pages/error/dashboard/reviews/Reviews";
 
 const router = createBrowserRouter([
     {
@@ -31,9 +34,12 @@ const router = createBrowserRouter([
             { path: "policy", element: <Policy /> },
             { path: "faq", element: <FAQ /> },
             { path: "about", element: <About /> },
+            { path: "header-news", element: <HeaderNews /> },
             { path: "terms", element: <Tarms /> },
             { path: "contact", element: <Contact /> },
-            { path: "slider", element: <Slider /> }
+            { path: "slider", element: <Slider /> },
+            { path: "why-use", element: <WhyUse /> },
+            { path: "reviews", element: <Reviews /> },
         ]
     },
     {
