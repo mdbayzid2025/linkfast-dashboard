@@ -1,158 +1,141 @@
-import {
-  DashboardOutlined,
-  ShopOutlined,
-  SettingOutlined,
-  FileTextOutlined,
-  EditOutlined,
-  AppstoreOutlined,
-  InfoCircleOutlined,
-  LockOutlined,
-  ContactsOutlined,
-  SafetyCertificateOutlined,
-  QuestionCircleOutlined,
-  ReadOutlined,
-  UserOutlined,
-  TeamOutlined,
-} from "@ant-design/icons";
 
+import { BsListTask, BsShop } from "react-icons/bs";
+import { GrTransaction } from "react-icons/gr";
+import { IoSettingsOutline } from "react-icons/io5";
+import { LiaUserSolid } from "react-icons/lia";
+import { PiMoney, PiUsers } from "react-icons/pi";
+import { RxDashboard } from "react-icons/rx";
 import type { TSidebarItem } from "./generateSidebarItems";
+import { AppstoreOutlined, EditOutlined, InfoCircleOutlined } from "@ant-design/icons";
+import { CiEdit, CiMoneyBill } from "react-icons/ci";
+import { TfiLayoutSlider } from "react-icons/tfi";
+import { MdOutlineCategory, MdOutlinePolicy, MdOutlineReviews } from "react-icons/md";
+import { TbAffiliate } from "react-icons/tb";
+import { HiOutlineDocumentChartBar } from "react-icons/hi2";
+import { RiQuestionMark } from "react-icons/ri";
+import { LuContact } from "react-icons/lu";
+import { FaQ } from "react-icons/fa6";
 
 export const sidebarItems: TSidebarItem[] = [
   {
     key: "dashboard",
     label: "Dashboard",
     path: "",
-    icon: <DashboardOutlined style={{ fontSize: '24px' }} />,
+    icon: <RxDashboard style={{ fontSize: '24px',  }} />,
   },
   {
     key: "transaction-details",
     label: "Transaction Details",
     path: "transaction-details",
-    icon: <FileTextOutlined style={{ fontSize: '24px' }} />,
+    icon: <GrTransaction  style={{ fontSize: '24px' }} />,
   },
   {
     key: "manage-shop",
     label: "Manage Shop",
     path: "manage-shop",
-    icon: <ShopOutlined style={{ fontSize: '24px' }} />,
+    icon: <BsShop style={{ fontSize: '24px' }} />,
   },
   {
     key: "user-list",
     label: "User List",
     path: "user-list",
-    icon: <UserOutlined style={{ fontSize: '24px' }} />,
+    icon: <LiaUserSolid style={{ fontSize: '24px' }} />,
   },
   {
     key: "all-admin",
     label: "All Admin",
     path: "all-admin",
-    icon: <TeamOutlined style={{ fontSize: '24px' }} />,
+    icon: <PiUsers style={{ fontSize: '24px' }} />,
   },
   {
     key: "settings",
     label: "Settings",
     path: "settings",
-    icon: <SettingOutlined style={{ fontSize: '24px' }} />,
+    icon: <IoSettingsOutline style={{ fontSize: '24px' }} />,
     children: [
       {
         key: "header-news",
         label: "Header News",
-        // icon: <EditOutlined style={{ fontSize: '24px' }} />,
+        icon: <CiEdit style={{ fontSize: '24px' }} />,
         path: "header-news",
       },
       {
         key: "slider",
         label: "Slider",
-        // icon: <AppstoreOutlined style={{ fontSize: '24px' }} />,
+        icon: <TfiLayoutSlider style={{ fontSize: '24px' }} />,
         path: "slider",
       },
-     
-      // {
-      //   key: "affiliate-marketting",
-      //   label: "Affiliate Marketting",
-      //   icon: <ShopOutlined style={{ fontSize: '24px' }} />,
-      //   path: "affiliate-marketting",
-      //   children: [
-      //     {
-      //       key: "interface-setup",
-      //       label: "Interface Setup",
-      //       icon: <ShopOutlined style={{ fontSize: '24px' }} />,
-      //       path: "interface-setup",
-      //     },
-      //     {
-      //       key: "coupon-code",
-      //       label: "Coupon Code",
-      //       icon: <ShopOutlined style={{ fontSize: '24px' }} />,
-      //       path: "coupon-code",
-      //     },
-      //   ]
-      // },
+
       {
         key: "category",
         label: "Manage SIM Category",
-        // icon: <ShopOutlined style={{ fontSize: '24px' }} />,
+        icon: <MdOutlineCategory style={{ fontSize: '24px' }} />,
         path: "category",
       },
-       {
+      {
         key: "interface-setup",
         label: "Interface Setup",
-        // icon: <ShopOutlined style={{ fontSize: '24px' }} />,
+        icon: <TbAffiliate style={{ fontSize: '24px' }} />,
         path: "interface-setup",
       },
       {
-        key: "coupon",
-        label: "Coupon",
-        // icon: <ShopOutlined style={{ fontSize: '24px' }} />,
-        path: "coupon",
-      },
-      {
-        key: "why-use",
-        label: "Why Use",
-        // icon: <InfoCircleOutlined style={{ fontSize: '24px' }} />,
-        path: "why-use",
+        key: "blogs",
+        label: "Blog",
+        icon: <HiOutlineDocumentChartBar style={{ fontSize: '24px' }} />,
+        path: "blogs",
       },
       {
         key: "reviews",
         label: "Reviews",
-        // icon: <EditOutlined style={{ fontSize: '24px' }} />,
+        icon: <MdOutlineReviews style={{ fontSize: '24px' }} />,
         path: "reviews",
+      },
+      {
+        key: "coupon",
+        label: "Coupon",
+        icon: <PiMoney style={{ fontSize: '24px' }} />,
+        path: "coupon",
       },
       {
         key: "about",
         label: "About",
-        // icon: <InfoCircleOutlined style={{ fontSize: '24px' }} />,
+        icon: <InfoCircleOutlined style={{ fontSize: '24px' }} />,
         path: "about",
       },
       {
+        key: "why-use",
+        label: "Why Use",
+        icon: <RiQuestionMark style={{ fontSize: '24px' }} />,
+        path: "why-use",
+      },
+      {
+        key: "faq",
+        label: "FAQ",
+        icon: <FaQ style={{ fontSize: '24px' }} />,
+        path: "faq",
+      },
+
+
+      {
         key: "terms",
         label: "Terms",
-        // icon: <LockOutlined style={{ fontSize: '24px' }} />,
+        icon: <BsListTask style={{ fontSize: '24px' }} />,
         path: "terms",
       },
       {
         key: "contact",
         label: "Contact",
-        // icon: <ContactsOutlined style={{ fontSize: '24px' }} />,
+        icon: <LuContact style={{ fontSize: '24px' }} />,
         path: "contact",
       },
       {
         key: "policy",
         label: "Policy",
-        // icon: <SafetyCertificateOutlined style={{ fontSize: '24px' }} />,
+        icon: <MdOutlinePolicy style={{ fontSize: '24px' }} />,
         path: "policy",
       },
-      {
-        key: "faq",
-        label: "FAQ",
-        // icon: <QuestionCircleOutlined style={{ fontSize: '24px' }} />,
-        path: "faq",
-      },
-      {
-        key: "blogs",
-        label: "Blog",
-        // icon: <ReadOutlined style={{ fontSize: '24px' }} />,
-        path: "blogs",
-      },
+
+
     ],
   },
 
