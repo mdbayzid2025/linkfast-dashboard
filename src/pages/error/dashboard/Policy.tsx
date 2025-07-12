@@ -5,16 +5,18 @@ const Policy = ({placeholder} : any) => {
   const editor = useRef(null);
   const [content, setContent] = useState('');
 
-  const config = useMemo(() => ({
-    readonly: false, // all options from https://xdsoft.net/jodit/docs/,
-    placeholder: placeholder || 'Start typings...'
-  }),
-    [placeholder]
-  );
+ const config = {
+    readonly: false,
+    placeholder: "Start typing...",
+    style: {
+      height: "60vh",
+      background: "white",
+    },
+  };
 
   return (
     <div className='bg-white p-4 rounded-2xl'>
-       <h1 className="text-2xl text-[#009A54] py-6 font-semibold">Policy</h1>
+       <h1 className="font-semibold tex-2xl text-[#009A54]">Policy</h1>
       <JoditEditor
         
         ref={editor}

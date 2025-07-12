@@ -1,9 +1,8 @@
-import { Button, Checkbox, ConfigProvider, Form, Input } from 'antd';
+import { Button, ConfigProvider, Form, Input } from 'antd';
 import { useForm } from 'antd/es/form/Form';
-import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Login = () => {
+const ForgetPassword = () => {
   const [form] = useForm();
 
   const onFinish = (values: any) => {
@@ -39,8 +38,7 @@ const Login = () => {
         <div className="relative z-10 flex items-center justify-center h-full px-4">
           <div className="bg-white p-8 rounded-xl shadow-xl w-full max-w-xl">
             <img src="/Layer_1.png" alt="Logo" className="w-24 mb-4 mx-auto" />
-            <h1 className="text-2xl font-semibold text-[#009A54] text-center mb-1">Login to Account</h1>
-            <p className="text-gray-600 text-center mb-6">Please enter your email and password to continue</p>
+            <h1 className="text-2xl font-semibold text-[#009A54] text-center mb-1">Forget Password</h1>            
 
             <Form
               form={form}
@@ -54,27 +52,14 @@ const Login = () => {
               >
                 <Input style={{ height: 42 }} placeholder="Enter your email address" />
               </Form.Item>
-
-              <Form.Item
-                label={<p className='text-lg font-medium text-slate-500'>Password</p>}
-                name="password"
-                rules={[{ required: true, message: 'Enter your password' }]}
-              >
-                <Input.Password style={{ height: 42 }} placeholder="Enter your password" />
-              </Form.Item>
-
-              <div className="flex items-center justify-between mb-4 font-medium">
-                <Form.Item style={{marginBottom: 0, fontSize: 18}}  name="remember" valuePropName="checked" label={null}>
-                  <Checkbox>Remember me</Checkbox>
-                </Form.Item>
-                <Link className='font-medium text-[14px]' to="/forget-password">Forget Password?</Link>
-              </div>
-
+             
+            <Link to="/verify-otp">
               <div className="flex items-center justify-center">
                 <Button style={{ width: "100%" }} type="primary" size="large" htmlType="submit">
-                  Login
+                  Send Code
                 </Button>
               </div>
+              </Link>
             </Form>
           </div>
         </div>
@@ -83,4 +68,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ForgetPassword;

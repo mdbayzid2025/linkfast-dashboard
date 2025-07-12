@@ -29,7 +29,7 @@ const FAQ = () => {
     return (
         <div className='bg-white p-4 rounded-2xl'>
             <div className="flex items-center justify-between mb-6">
-                <h1 className="text-2xl text-[#009A54] py-6 font-semibold">Terms</h1>
+                <h1 className="font-semibold text-2xl text-[#009A54]">Terms</h1>
                 <Button onClick={()=>setOpen(!open)} type="primary" size='large' className='flex items-center'> <FiPlus size={24} />Add Content</Button>
             </div>
 

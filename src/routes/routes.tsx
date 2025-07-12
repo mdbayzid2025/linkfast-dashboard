@@ -2,9 +2,9 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import ErrorPage from "../pages/error/ErrorPage";
 import Dashboard from "../pages/error/dashboard/Dashboard/Dashboard";
-import Blogs from "../pages/error/dashboard/Blogs";
+
 import Login from "../pages/error/authentication/Login";
-import About from "../pages/error/dashboard/Dashboard/About";
+
 import Tarms from "../pages/error/dashboard/Tarms";
 import Contact from "../pages/error/dashboard/Contact";
 import TransactionDetails from "../pages/error/dashboard/transactionDetails/TransactionDetails";
@@ -17,6 +17,14 @@ import Slider from "../pages/error/dashboard/Slider/Slider";
 import HeaderNews from "../pages/error/dashboard/HeaderNews/HeaderNews";
 import WhyUse from "../pages/error/dashboard/WhyUse/WhyUser";
 import Reviews from "../pages/error/dashboard/reviews/Reviews";
+import CouponManage from "../pages/error/dashboard/Coupon/CouponManage";
+import SubCategory from "../pages/error/dashboard/ManageSubcategory/ManageSubcategory";
+import InterfaceSetup from "../pages/error/dashboard/InterfaceSetup/InterfaceSetup";
+import About from "../pages/error/dashboard/About/About";
+import Blogs from "../pages/error/dashboard/Blogs/Blogs";
+import ForgetPassword from "../pages/error/authentication/ForgetPassword";
+import VerifyOTP from "../pages/error/authentication/VerifyOTP";
+import NewPassword from "../pages/error/authentication/NewPassword";
 
 const router = createBrowserRouter([
     {
@@ -30,7 +38,6 @@ const router = createBrowserRouter([
             { path: "user-list", element: <UserList /> },
             { path: "all-admin", element: <AllAdmin /> },
             { path: "blogs", element: <Blogs /> },
-            { path: "about", element: <About /> },
             { path: "policy", element: <Policy /> },
             { path: "faq", element: <FAQ /> },
             { path: "about", element: <About /> },
@@ -40,12 +47,16 @@ const router = createBrowserRouter([
             { path: "slider", element: <Slider /> },
             { path: "why-use", element: <WhyUse /> },
             { path: "reviews", element: <Reviews /> },
+            { path: "coupon", element: <CouponManage /> },
+            { path: "category", element: <SubCategory /> },
+            { path: "interface-setup", element: <InterfaceSetup /> },
         ]
     },
-    {
-        path: "/login",
-        element: <Login />
-    }
+    { path: "/login", element: <Login />},
+    { path: "/forget-password", element: <ForgetPassword />},
+    { path: "/verify-otp", element: <VerifyOTP />},
+    { path: "/new-password", element: <NewPassword />},
+
 ])
 
 export default router;

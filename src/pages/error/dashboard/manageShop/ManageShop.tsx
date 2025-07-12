@@ -9,8 +9,8 @@ import AddProductModal from './AddProduct'
 
 const ManageShop = () => {
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
-  const [open, setOpen] = useState(false);    
-  const [openConfirmModal, setOpenConfirmModal] = useState(false)  
+  const [open, setOpen] = useState(false);
+  const [openConfirmModal, setOpenConfirmModal] = useState(false)
   const [editData, setEditData] = useState<any | null>(null);
 
 
@@ -40,13 +40,13 @@ const ManageShop = () => {
 
 
   const handleDelete = () => {
-    console.log("Product deleted!");    
+    console.log("Product deleted!");
   };
 
   return (
     <div className='bg-white  rounded-xl'>
       <div className="flex items-center justify-between px-4 py-6">
-        <h1 className='font-semibold text-xl'>Manage Shop</h1>
+        <h1 className='font-semibold text-2xl text-[#009A54]'>Manage Shop</h1>
 
         <div className="flex items-center justify-end gap-5">
           <div className="relative">
@@ -76,14 +76,14 @@ const ManageShop = () => {
         </div>
 
       </div>
-      <Table dataSource={productData} columns={tableComuln} size="large" 
+      <Table dataSource={productData} columns={tableComuln} size="large"
         pagination={{
           pageSize: 10,
         }}
         className='transactionTable px-4'
       />
       <CustomDeleteModal open={openConfirmModal} setOpen={setOpenConfirmModal} onConfirm={handleDelete} title="Are you sure you want to delete this product?" />
-      <AddProductModal open={open} setOpen={setOpen}  editData={editData} setEditData={setEditData}/>
+      <AddProductModal open={open} setOpen={setOpen} editData={editData} setEditData={setEditData} />
     </div>
   )
 }

@@ -65,7 +65,7 @@ const Sidebar = () => {
           itemActiveBg: "#286a25",
           itemBorderRadius: "10px 0 10px 0" as any,
           itemHeight: 45,
-          itemMarginBlock: 12,
+          itemMarginBlock: 12,        
         }
       }
     }}>
@@ -76,18 +76,18 @@ const Sidebar = () => {
         collapsedWidth="0"
       >
         <Link to="/">
-        <div className=""
-        style={{
-          margin: "0 20px",
-          padding: "20px 0",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-        >
+          <div className=""
+            style={{
+              margin: "0 20px",
+              padding: "20px 0",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
 
-        <img src='/Layer_1.png' className="mx-auto h-[80px] w-[100px] " alt='logo'/>
-        </div>
+            <img src='/Layer_1.png' className="mx-auto h-[80px] w-[100px] " alt='logo' />
+          </div>
         </Link>
 
         <div
@@ -107,30 +107,30 @@ const Sidebar = () => {
             style={{ flexGrow: 1, overflowY: "auto" }}
           />
           <Link to="/login" >
-          <Button
-            type="primary"
-            // icon={}
-            style={{
-              width: "100%",
-              marginTop: "auto",
-              border: "none",
-              outline: "none",
-              backgroundColor: "transparent",
-              color: "#009A54",
-              textAlign: "left",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-start",
-              height: 45,
-              paddingBlock: "20px",
-              fontWeight: "400",
-              fontSize: "16px",
-              borderTop: "1px solid #ededed"
-            }}
-          >
-            <TbLogout size={24} />
-            Logout
-          </Button>
+            <Button
+              type="primary"
+              // icon={}
+              style={{
+                width: "100%",
+                marginTop: "auto",
+                border: "none",
+                outline: "none",
+                backgroundColor: "transparent",
+                color: "#009A54",
+                textAlign: "left",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "flex-start",
+                height: 45,
+                paddingBlock: "20px",
+                fontWeight: "400",
+                fontSize: "16px",
+                borderTop: "1px solid #ededed"
+              }}
+            >
+              <TbLogout size={24} />
+              Logout
+            </Button>
           </Link>
         </div>
       </Sider>

@@ -48,7 +48,7 @@ const HeaderNews = () => {
   return (
     <div className='bg-white  rounded-xl'>
       <div className="flex items-center justify-between px-4 py-6">
-        <h1 className='font-semibold text-xl'>Header News</h1>
+        <h1 className='font-semibold text-2xl text-[#009A54]'>Header News</h1>
 
         <div className="flex items-center justify-end gap-5">
           <Button onClick={()=>setActiveAll(!openActiveAll)} size='large' shape="round" 

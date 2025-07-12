@@ -68,7 +68,7 @@ const AllAdmin = () => {
   return (
     <div className="bg-white rounded-xl">
       <div className="flex items-center justify-between px-4 py-6">
-        <h1 className="text-xl font-semibold">All Registry Users</h1>
+        <h1 className="font-semibold text-2xl text-[#009A54]">All Registry Users</h1>
 
         <div className="relative">
           <Input

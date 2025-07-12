@@ -55,21 +55,37 @@ body {
   color: black !important;
 }
 
-/* Desktop: keep 60vh */
-.jodit-workplace {
-  min-height: 60vh !important;
+
+
+
+/* Submenu height */
+.ant-menu-submenu .ant-menu-item {
+  padding-block: 0 !important; /* override default 8px */
+  margin-block: 0 !important;
+  height: 30 !important;
 }
 
-/* Laptops: smaller height */
-@media (max-width: 1440px) {
-  .jodit-workplace {
-    min-height: 50vh !important;
-  }
+
+/* Ensure child label color stays white too */
+.ant-menu-light .ant-menu-item-selected a,
+.ant-menu-light .ant-menu-submenu-selected a {
+  transition: none !important;  
 }
 
-/* Smaller laptops or tablets */
-@media (max-width: 1024px) {
-  .jodit-workplace {
-    min-height: 40vh !important;
-  }
+.atn-menu-title-content {
+  transition: none !important;  
+}
+
+.ant-otp-input-wrapper {
+  width: 100% !important;
+}
+
+.ant-otp-input {
+  width: 100% !important;
+  height: 60px !important;
+  font-size: 24px !important;
+}
+
+.ant-otp {
+  width: 100% !important;
 }

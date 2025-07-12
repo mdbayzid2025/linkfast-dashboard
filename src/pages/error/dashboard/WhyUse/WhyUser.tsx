@@ -55,7 +55,7 @@ const WhyUse = () => {
   return (
     <div className='bg-white  rounded-xl'>
       <div className="flex items-center justify-between px-4 pt-4">
-        <h1 className='font-semibold text-3xl text-[#009A54]'>Why Use</h1>
+        <h1 className='font-semibold text-2xl text-[#009A54]'>Why Use</h1>
         <div className="flex items-center gap-4">
           <Button onClick={() => setActiveAll(!openActiveAll)} size='large' shape="round"
             className='flex items-center justify-center w-[140px]'
