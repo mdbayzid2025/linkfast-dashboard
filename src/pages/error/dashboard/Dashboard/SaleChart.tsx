@@ -7,10 +7,10 @@ const { Option } = Select;
 const SaleChart = () => {
 
     return (
-        <div className='bg-white py-6 rounded-xl'>
+        <div className='bg-white py-6 rounded-xl w-full'>
             <div className="flex items-center justify-between px-10 mb-4">
                 <h1 className='text-xl font-bold'>Total Quotes <span className='font-normal'>Statistics</span> </h1>
-                <Select defaultValue="2022" size='middle' className='w-[100px]'>
+                <Select defaultValue="2025" size='middle' className='w-[100px]'>
                     <Option value="2022">2022</Option>
                     <Option value="2023">2023</Option>
                     <Option value="2024">2024</Option>
@@ -33,8 +33,8 @@ const SaleChart = () => {
                     <YAxis />
                     <Tooltip />
                     {/* <Legend /> */}
-                    <Bar barSize={30} dataKey="saleTotal" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} />
-                    <Bar barSize={30} dataKey="category" fill="#82ca9d" activeBar={<Rectangle fill="gold" stroke="purple" />} />
+                    <Bar barSize={10} radius={50} dataKey="saleTotal" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} />
+                    <Bar barSize={10} radius={50} dataKey="category" fill="#82ca9d" activeBar={<Rectangle fill="gold" stroke="purple" />} />
                 </BarChart>
             </ResponsiveContainer>
         </div>
