@@ -1,7 +1,7 @@
 import { Button, Form, Input, Modal, Table, Tooltip } from 'antd';
 import { useEffect, useState } from 'react';
 import { FaRegEdit, FaRegTrashAlt } from 'react-icons/fa';
-import DeleteModal from '../../../components/shared/DeleteModal';
+
 import CustomDeleteModal from '../../../components/shared/CustomDeleteModal';
 // import CustomDeleteModal from '../../../components/shared/CustomDeleteModal';
 

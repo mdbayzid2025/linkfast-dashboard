@@ -1,8 +1,8 @@
 import { Button, Checkbox } from 'antd';
 import { useState } from 'react';
-import { FiEdit, FiPlus, FiTrash } from 'react-icons/fi';
-import FaqAddModal from './FaqAddModal';
+import { FiEdit, FiPlus } from 'react-icons/fi';
 import { GoTrash } from 'react-icons/go';
+import FaqAddModal from './FaqAddModal';
 
 const FAQ = () => {
     const [open, setOpen] = useState<boolean>(false);

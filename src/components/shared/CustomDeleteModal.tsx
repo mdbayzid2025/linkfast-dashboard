@@ -5,8 +5,7 @@ const CustomDeleteModal = ({
   open,
   setOpen,
   onConfirm,
-  title = "Are you sure you want to delete this?",
-  productName,
+  title = "Are you sure you want to delete this?",  
 }: {
   open: boolean;
   setOpen: (val: boolean) => void;
