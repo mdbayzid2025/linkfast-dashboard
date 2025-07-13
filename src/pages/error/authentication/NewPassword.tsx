@@ -1,6 +1,5 @@
 import { Button, ConfigProvider, Form, Input } from 'antd';
 import { useForm } from 'antd/es/form/Form';
-import Password from 'antd/es/input/Password';
 import { Link } from 'react-router-dom';
 
 const NewPassword = () => {

@@ -1,7 +1,7 @@
-import { Button, Form, Input, Modal, DatePicker } from 'antd';
+import { Button, DatePicker, Form, Input, Modal } from 'antd';
 import FormItem from 'antd/es/form/FormItem';
-import React, { useEffect } from 'react';
 import dayjs from 'dayjs';
+import { useEffect } from 'react';
 
 export type CouponModalProps = {
   open: boolean;

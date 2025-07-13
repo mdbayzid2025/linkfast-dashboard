@@ -1,20 +1,19 @@
 
+import { InfoCircleOutlined, MessageOutlined } from "@ant-design/icons";
 import { BsListTask, BsShop } from "react-icons/bs";
+import { CiEdit } from "react-icons/ci";
 import { GrTransaction } from "react-icons/gr";
+import { HiOutlineDocumentChartBar } from "react-icons/hi2";
 import { IoSettingsOutline } from "react-icons/io5";
 import { LiaUserSolid } from "react-icons/lia";
-import { PiMoney, PiUsers } from "react-icons/pi";
-import { RxDashboard } from "react-icons/rx";
-import type { TSidebarItem } from "./generateSidebarItems";
-import { AppstoreOutlined, EditOutlined, InfoCircleOutlined, MessageOutlined } from "@ant-design/icons";
-import { CiEdit, CiMoneyBill } from "react-icons/ci";
-import { TfiLayoutSlider } from "react-icons/tfi";
-import { MdOutlineCategory, MdOutlinePolicy, MdOutlineReviews } from "react-icons/md";
-import { TbAffiliate } from "react-icons/tb";
-import { HiOutlineDocumentChartBar } from "react-icons/hi2";
-import { RiQuestionMark } from "react-icons/ri";
 import { LuContact } from "react-icons/lu";
-import { FaQ } from "react-icons/fa6";
+import { MdOutlineCategory, MdOutlinePolicy, MdOutlineReviews } from "react-icons/md";
+import { PiMoney, PiUsers } from "react-icons/pi";
+import { RiQuestionMark } from "react-icons/ri";
+import { RxDashboard } from "react-icons/rx";
+import { TbAffiliate } from "react-icons/tb";
+import { TfiLayoutSlider } from "react-icons/tfi";
+import type { TSidebarItem } from "./generateSidebarItems";
 
 export const sidebarItems: TSidebarItem[] = [
   {

@@ -16,7 +16,6 @@ const UsersList = () => {
 
   const [selectedUserData, setSelectedUserData] = useState<any>(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
   const handleDelete = () => {
     console.log("Deleting user:", selectedUser);
     setOpenConfirmModal(false);

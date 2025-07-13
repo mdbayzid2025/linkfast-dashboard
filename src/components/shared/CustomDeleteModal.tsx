@@ -1,6 +1,5 @@
-import { Modal, Button } from "antd";
 import { ExclamationCircleOutlined } from "@ant-design/icons";
-import React from "react";
+import { Button, Modal } from "antd";
 
 export type DeleteProductModalProps = {
   title: string;

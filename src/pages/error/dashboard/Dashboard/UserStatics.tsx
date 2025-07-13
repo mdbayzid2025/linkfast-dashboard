@@ -1,7 +1,6 @@
-import React from 'react'
-import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
-import { userChartData } from '../../../../data/Chart/UserChartData'
-import { Select } from 'antd'
+import { Select } from 'antd';
+import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import { userChartData } from '../../../../data/Chart/UserChartData';
 
 const { Option } = Select;
 

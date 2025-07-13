@@ -1,9 +1,9 @@
-import { Button, Table, Tooltip } from 'antd';
+import { Button, Table } from 'antd';
 import { useState } from 'react';
 import { FaRegEdit, FaRegTrashAlt } from 'react-icons/fa';
 import { FiInfo } from 'react-icons/fi';
-import AddInterfaceModal from './AddInterfaceModal';
 import CustomDeleteModal from '../../../../components/shared/CustomDeleteModal';
+import AddInterfaceModal from './AddInterfaceModal';
 import InterfaceDetailsModal from './InterfaceDetailsModal';
 
 

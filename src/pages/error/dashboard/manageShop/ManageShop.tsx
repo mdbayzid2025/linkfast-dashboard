@@ -7,8 +7,7 @@ import CustomDeleteModal from '../../../../components/shared/CustomDeleteModal'
 import { productData } from '../../../../data/ProductsData'
 import AddProductModal from './AddProduct'
 
-const ManageShop = () => {
-  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+const ManageShop = () => {  
   const [open, setOpen] = useState(false);
   const [openConfirmModal, setOpenConfirmModal] = useState(false)
   const [editData, setEditData] = useState<any | null>(null);

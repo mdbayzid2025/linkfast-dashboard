@@ -1,5 +1,4 @@
-import { SearchOutlined } from '@ant-design/icons';
-import { Button, Form, Input, message, Modal, Table, Tooltip } from 'antd';
+import { Button, Form, Input, Modal, Table, Tooltip } from 'antd';
 import { useEffect, useState } from 'react';
 import { FaRegEdit, FaRegTrashAlt } from 'react-icons/fa';
 import CustomDeleteModal from '../../../components/shared/CustomDeleteModal';
@@ -19,8 +18,7 @@ export const contactData = [
 
 
 const UsersList = () => {
-
-  const [searchText, setSearchText] = useState('');
+  
   const [openConfirmModal, setOpenConfirmModal] = useState(false);
   const [selectedUser, setSelectedUser] = useState<any>(null);
   const [editData, setEditData] = useState<any | null>(null);

@@ -1,7 +1,6 @@
 import { SearchOutlined } from '@ant-design/icons'
 import { Button, Input, Table, Tooltip } from 'antd'
 import { useState } from 'react'
-import { sliderData } from '../../../../data/SliderData'
 import { FaRegEdit, FaRegEye, FaRegEyeSlash, FaRegTrashAlt } from 'react-icons/fa'
 
 import CustomDeleteModal from '../../../../components/shared/CustomDeleteModal'

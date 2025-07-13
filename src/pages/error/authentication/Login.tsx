@@ -1,6 +1,5 @@
 import { Button, Checkbox, ConfigProvider, Form, Input } from 'antd';
 import { useForm } from 'antd/es/form/Form';
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Login = () => {

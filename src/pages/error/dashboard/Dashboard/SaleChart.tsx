@@ -1,7 +1,6 @@
-import React from 'react'
-import { Bar, BarChart, CartesianGrid, Rectangle, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
-import { salesChartData } from '../../../../data/SalesChartData'
-import { Select } from 'antd'
+import { Select } from 'antd';
+import { Bar, BarChart, CartesianGrid, Rectangle, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import { salesChartData } from '../../../../data/SalesChartData';
 
 const { Option } = Select;
 const SaleChart = () => {

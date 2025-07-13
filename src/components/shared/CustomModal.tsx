@@ -1,5 +1,5 @@
-import { Modal as AntModal, Modal } from 'antd'
-import React from 'react'
+import { Modal as AntModal } from 'antd';
+import React from 'react';
 
 export type CustomModalProps = {
     title: string;
@@ -14,7 +14,7 @@ const CustomModal = ({title, setOpen, open, width, body} : CustomModalProps) => 
         setOpen(!open)
     }
   return (
-    <Modal
+    <AntModal
     open={open}
     onCancel={handleClose}
     title={<p className="text-black font-medium text-xl">{title}</p>}
@@ -22,7 +22,7 @@ const CustomModal = ({title, setOpen, open, width, body} : CustomModalProps) => 
     centered
     >
         {body}
-    </Modal>
+    </AntModal>
   )
 }
 

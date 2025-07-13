@@ -1,8 +1,7 @@
-import { Layout } from 'antd'
-import React from 'react'
-import Sidebar from './Sidebar'
-import HeaderDashboard from './HeaderDashboard'
+import { Layout } from 'antd';
 import { Outlet } from 'react-router-dom';
+import HeaderDashboard from './HeaderDashboard';
+import Sidebar from './Sidebar';
 
 const {Content} = Layout;
 const MainLayout = () => {

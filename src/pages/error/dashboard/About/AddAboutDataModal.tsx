@@ -1,8 +1,7 @@
 import { Button, Form, Input, InputNumber, Modal } from 'antd';
-import TextArea from 'antd/es/input/TextArea';
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { PiImageThin } from 'react-icons/pi';
 import JoditEditor from 'jodit-react';
+import { useEffect, useRef, useState } from 'react';
+import { PiImageThin } from 'react-icons/pi';
 
 type Props = {
   open: boolean;

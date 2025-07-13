@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaDollarSign, FaRegUser } from 'react-icons/fa'
 import { FiBox } from 'react-icons/fi'
 import { LuShare2 } from 'react-icons/lu'

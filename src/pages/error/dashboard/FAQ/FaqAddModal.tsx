@@ -1,8 +1,7 @@
-import { Button, Form, Input, Modal } from 'antd'
-import { useForm } from 'antd/es/form/Form';
+import { Button, Form, Input, Modal } from 'antd';
 import FormItem from 'antd/es/form/FormItem';
 import TextArea from 'antd/es/input/TextArea';
-import React, { useEffect } from 'react'
+import { useEffect } from 'react';
 
 export type faqProps = {
     open: boolean;

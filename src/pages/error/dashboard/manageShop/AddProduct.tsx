@@ -1,5 +1,5 @@
+import { Button, Form, Input, Modal, Select } from "antd";
 import React, { useEffect, useState } from "react";
-import { Modal, Form, Input, InputNumber, Button, Select } from "antd";
 import { PiImageThin } from "react-icons/pi";
 
 const { Option } = Select;

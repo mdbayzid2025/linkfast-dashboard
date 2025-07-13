@@ -29,10 +29,10 @@ const UserDetailsModal = ({ open, setOpen, userData }: {
         <Modal
         // title="User Details"
             title={<p className="text-xl font-semibold text-[#009A54]">User Details</p>}
+            centered
             open={open}
             width={800}
             height="70%"
-            centered
             onCancel={handleCloseModal}
             footer={false}
         >

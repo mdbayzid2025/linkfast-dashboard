@@ -1,6 +1,5 @@
 import { Button, Form, Input, Modal } from 'antd';
 import FormItem from 'antd/es/form/FormItem';
-import TextArea from 'antd/es/input/TextArea';
 import { useEffect } from 'react';
 
 export type newsProps = {

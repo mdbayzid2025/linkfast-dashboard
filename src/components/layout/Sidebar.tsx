@@ -1,9 +1,9 @@
 import { Button, ConfigProvider, Layout, Menu } from 'antd';
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { TbLogout } from 'react-icons/tb';
 import { Link, useLocation } from 'react-router-dom';
 import type { TSidebarItem } from '../../utils/generateSidebarItems';
 import { sidebarItems } from '../../utils/sidebarItems';
-import { TbLogout } from 'react-icons/tb';
 
 const { Sider } = Layout;
 

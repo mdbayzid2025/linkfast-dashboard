@@ -20,7 +20,7 @@ const AllAdmin = () => {
   const [isOpen, setIsOpen] = useState(false);  
   
   const handleDelete = () => {
-    console.log("Deleting user:", selectedUser);
+    console.log("Deleting user:", selectedUser, searchText);
     setOpenConfirmModal(false);
   };
 
@@ -68,7 +68,7 @@ const AllAdmin = () => {
   return (
     <div className="bg-white rounded-xl">
       <div className="flex items-center justify-between px-6 py-6">
-        <h1 className="font-semibold text-2xl text-[#009A54]">All Registry Users</h1>
+        <h1 className="font-semibold text-2xl text-[#009A54]">All Admin</h1>
 
         <div className="relative">
           <Input

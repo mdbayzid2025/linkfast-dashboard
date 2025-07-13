@@ -7,8 +7,7 @@ import CustomDeleteModal from '../../../../components/shared/CustomDeleteModal'
 import AddHeaderNewsModal from './AddHeaderNewsModal'
 
 
-const HeaderNews = () => {
-  const [selectedRowKeys, setSelectedRowKeys] = useState([]);
+const HeaderNews = () => {  
   const [openConfirmModal, setOpenConfirmModal] = useState(false)
   const [editData, setEditData] = useState<any | null>(null);
 
