@@ -22,13 +22,13 @@ const CouponManage = () => {
       title: "Action",
       render: (_: any, record: any) => (
         <div className="flex items-center gap-4">
-          <FaRegEdit onClick={() => { setOpen(true); setEditData(record); }} className="text-[#009A54] cursor-pointer" size={20} />
-          <FaRegTrashAlt onClick={() => setOpenConfirmModal(true)} className="text-red-600 cursor-pointer" size={20} />
+          <FaRegEdit onClick={() => { setOpen(true); setEditData(record); }} className="text-[#009A54] cursor-pointer" size={18} />
+          <FaRegTrashAlt onClick={() => setOpenConfirmModal(true)} className="text-red-600 cursor-pointer" size={18} />
           <Tooltip title={record.status}>
             {(selectedCouponId === record.key || record.status === "active") ? (
-              <FaRegEye onClick={() => setSelectedCouponId(record.key)} size={20} className='text-green-600 cursor-pointer' />
+              <FaRegEye onClick={() => setSelectedCouponId(record.key)} size={18} className='text-green-600 cursor-pointer' />
             ) : (
-              <FaRegEyeSlash onClick={() => setSelectedCouponId(record.key)} size={20} className='text-red-600 cursor-pointer' />
+              <FaRegEyeSlash onClick={() => setSelectedCouponId(record.key)} size={18} className='text-red-600 cursor-pointer' />
             )}
           </Tooltip>
         </div>
@@ -61,7 +61,7 @@ const CouponManage = () => {
         columns={tableColumns}
         size="large"
         pagination={{ pageSize: 10 }}
-        className="px-6 pt-4"
+        className="transactionTable px-6 pt-4"
       />
 
       <AddCouponModal open={open} setOpen={setOpen} editData={editData} setEditData={setEditData} />

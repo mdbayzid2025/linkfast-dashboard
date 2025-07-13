@@ -30,8 +30,8 @@ const ManageShop = () => {
         >
           <FaRegEdit
             onClick={() => { setOpen(true); setEditData(record) }}
-            className="text-[#009A54] cursor-pointer" size={24} />
-          <FaRegTrashAlt onClick={() => setOpenConfirmModal(true)} className="text-red-600 cursor-pointer" size={24} />
+            className="text-[#009A54] cursor-pointer" size={18} />
+          <FaRegTrashAlt onClick={() => setOpenConfirmModal(true)} className="text-red-600 cursor-pointer" size={18} />
         </div>
       ),
     },

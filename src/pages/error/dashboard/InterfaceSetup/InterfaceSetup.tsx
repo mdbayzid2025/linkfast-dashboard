@@ -18,7 +18,7 @@ const InterfaceSetup = () => {
     {
       key: '1',
       title: 'Invite & Earn',
-      description: 'Help your friends save and get rewarded together! Share your link with friends. Once they join and make a purchase, you’ll both receive rewards like bonus data or store credit automatically',
+      description: 'Help your friends save and get rewarded together!Share your link with friends. Once they join and make a purchase, you’ll both receive rewards like bonus data or store credit automatically',
       image: 'https://images.pexels.com/photos/7986991/pexels-photo-7986991.jpeg',
     }
   ];
@@ -37,7 +37,7 @@ const InterfaceSetup = () => {
       title: 'Action',
       render: (_: any, record: any) => (
         <div className="flex items-center gap-4">
-          <FiInfo size={24}
+          <FiInfo size={18}
             className="text-[#009A54] cursor-pointer"
             onClick={() => {
               setSelectedUserData(record);
@@ -47,12 +47,12 @@ const InterfaceSetup = () => {
           <FaRegEdit
             onClick={() => { setOpen(true); setEditData(record); }}
             className="text-[#009A54] cursor-pointer"
-            size={20}
+            size={18}
           />
           <FaRegTrashAlt
             onClick={() => setOpenConfirmModal(true)}
             className="text-red-600 cursor-pointer"
-            size={20}
+            size={18}
           />
         </div>
       )

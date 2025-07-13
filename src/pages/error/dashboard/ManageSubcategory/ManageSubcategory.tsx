@@ -41,13 +41,13 @@ const SubCategory = () => {
             title: "Action",
             render: (_: any, record: any) => (
                 <div className="flex items-center gap-3">
-                    <FaRegEdit onClick={() => { setOpen(true); setEditData(record); }} className="text-[#009A54] cursor-pointer" size={20} />
-                    <FaRegTrashAlt onClick={() => setDeleteModal(true)} className="text-red-600 cursor-pointer" size={20} />
+                    <FaRegEdit onClick={() => { setOpen(true); setEditData(record); }} className="text-[#009A54] cursor-pointer" size={18} />
+                    <FaRegTrashAlt onClick={() => setDeleteModal(true)} className="text-red-600 cursor-pointer" size={18} />
                     <Tooltip title={record.status}>
                         {selectedSubCategory === record.key || record.status === "active" ? (
-                            <FaRegEye onClick={() => setSelectedSubCategory(record.key)} className="text-green-600 cursor-pointer" size={20} />
+                            <FaRegEye onClick={() => setSelectedSubCategory(record.key)} className="text-green-600 cursor-pointer" size={18} />
                         ) : (
-                            <FaRegEyeSlash onClick={() => setSelectedSubCategory(record.key)} className="text-red-600 cursor-pointer" size={20} />
+                            <FaRegEyeSlash onClick={() => setSelectedSubCategory(record.key)} className="text-red-600 cursor-pointer" size={18} />
                         )}
                     </Tooltip>
                 </div>
@@ -88,7 +88,7 @@ const SubCategory = () => {
                 columns={columns}
                 dataSource={filteredData}
                 pagination={{ pageSize: 10 }}
-                className="px-6 pt-4"
+                className="transactionTable px-6 pt-4"
                 size="large"
             />
 

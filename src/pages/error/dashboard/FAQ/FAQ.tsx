@@ -2,6 +2,7 @@ import { Button, Checkbox } from 'antd';
 import { useState } from 'react';
 import { FiEdit, FiPlus, FiTrash } from 'react-icons/fi';
 import FaqAddModal from './FaqAddModal';
+import { GoTrash } from 'react-icons/go';
 
 const FAQ = () => {
     const [open, setOpen] = useState<boolean>(false);
@@ -29,7 +30,7 @@ const FAQ = () => {
     return (
         <div className='bg-white p-6 rounded-2xl'>
             <div className="flex items-center justify-between mb-6">
-                <h1 className="font-semibold text-2xl text-[#009A54]">Terms</h1>
+                <h1 className="font-semibold text-2xl text-[#009A54]">FAQ</h1>
                 <Button onClick={()=>setOpen(!open)} type="primary" size='large' className='flex items-center'> <FiPlus size={24} />Add Content</Button>
             </div>
 
@@ -50,7 +51,7 @@ const FAQ = () => {
                         <div className='w-14'>
                             <div className="flex flex-col items-center gap-3 text-[#999999]">
                                 <FiEdit className='cursor-pointer' onClick={()=>{setOpen(true); setEditData(item)}} size={24} />
-                                <FiTrash className='cursor-pointer' size={24} color='red'/>
+                                <GoTrash className='cursor-pointer' size={24} color='red'/>
                             </div>
                         </div>
                     </div>

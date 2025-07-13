@@ -55,7 +55,7 @@ const Reviews = () => {
             <FaRegEdit
               onClick={() => { setOpen(true); setEditData(record); }}
               className="text-[#009A54] cursor-pointer"
-              size={24}
+              size={18}
             />          
           <FaRegTrashAlt
             onClick={() => {
@@ -63,11 +63,11 @@ const Reviews = () => {
               setOpenConfirmModal(true);
             }}
             className="text-red-600 cursor-pointer"
-            size={24}
+            size={18}
           />
           <Tooltip title={record.status}>
-            {record.status ==="Accepted" ? <FaRegEye className={`${getStatusColor(record.status)} cursor-pointer`} size={24} /> 
-            : <FaRegEyeSlash className={`${getStatusColor(record.status)} cursor-pointer`} size={24} />
+            {record.status ==="Accepted" ? <FaRegEye className={`${getStatusColor(record.status)} cursor-pointer`} size={18} /> 
+            : <FaRegEyeSlash className={`${getStatusColor(record.status)} cursor-pointer`} size={18} />
             }
           </Tooltip>
         </div>
@@ -84,7 +84,7 @@ const Reviews = () => {
             className='flex items-center justify-center w-[140px]'
             style={{ fontWeight: 600, }}
           >
-            {openActiveAll ? <FaRegEyeSlash size={24} /> : <FaRegEye size={24} />}
+            {openActiveAll ? <FaRegEyeSlash size={18} /> : <FaRegEye size={18} />}
             {openActiveAll ? "Reject All" : "Accept All"}
           </Button>
           <div className="relative">

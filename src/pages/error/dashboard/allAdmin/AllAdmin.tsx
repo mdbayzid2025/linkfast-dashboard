@@ -42,7 +42,7 @@ const AllAdmin = () => {
       title: 'Actions',
       render: (_: any, record: any) => (
         <div className="flex items-center gap-3">
-          <FiInfo size={24}
+          <FiInfo size={18}
             className="text-[#009A54] cursor-pointer"            
             onClick={() => {
               setSelectedUserData(record);
@@ -51,7 +51,7 @@ const AllAdmin = () => {
           />
           <FaRegTrashAlt
             className="text-red-600 cursor-pointer"
-            size={24}
+            size={18}
             onClick={() => {
               setSelectedUser(record);
               setOpenConfirmModal(true);

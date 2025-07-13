@@ -26,14 +26,14 @@ const HeaderNews = () => {
         >
           <FaRegEdit
             onClick={() => { setOpen(true); setEditData(record) }}
-            className="text-[#009A54] cursor-pointer" size={24}
+            className="text-[#009A54] cursor-pointer" size={18}
           />
 
           <FaRegTrashAlt
-            onClick={() => setOpenConfirmModal(true)} className="text-red-600 cursor-pointer" size={24} />
+            onClick={() => setOpenConfirmModal(true)} className="text-red-600 cursor-pointer" size={18} />
 
           <Tooltip title={record.status}>
-            {(selectedNewsId == record.key || record.status == "active") ? <FaRegEye onClick={() => setSelectedNewsId(record.key)} size={24} className='text-green-600 cursor-pointer' /> : <FaRegEyeSlash onClick={() => setSelectedNewsId(record.key)} size={24} className='text-red-600 cursor-pointer' />}
+            {(selectedNewsId == record.key || record.status == "active") ? <FaRegEye onClick={() => setSelectedNewsId(record.key)} size={18} className='text-green-600 cursor-pointer' /> : <FaRegEyeSlash onClick={() => setSelectedNewsId(record.key)} size={18} className='text-red-600 cursor-pointer' />}
           </Tooltip>
         </div>
       ),

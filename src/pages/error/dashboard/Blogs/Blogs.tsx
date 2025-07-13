@@ -56,7 +56,7 @@ const Blogs = () => {
       title: 'Action',
       render: (_: any, record: any) => (
         <div className="flex items-center gap-4">
-          <FiInfo size={24}
+          <FiInfo size={18}
             className="text-[#009A54] cursor-pointer"
             onClick={() => {
               setSelectedBlogData(record);
@@ -67,7 +67,7 @@ const Blogs = () => {
           <Tooltip title="Edit">
             <FaRegEdit
               className="text-[#009A54] cursor-pointer"
-              size={20}
+              size={18}
               onClick={() => {
                 setEditData(record);
                 setOpen(true);
@@ -77,7 +77,7 @@ const Blogs = () => {
           <Tooltip title="Delete">
             <FaRegTrashAlt
               className="text-red-600 cursor-pointer"
-              size={20}
+              size={18}
               onClick={() => {
                 setSelected(record);
                 setOpenDelete(true);

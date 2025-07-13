@@ -1,7 +1,9 @@
 import { Button, Form, Input, Modal, Table, Tooltip } from 'antd';
 import { useEffect, useState } from 'react';
 import { FaRegEdit, FaRegTrashAlt } from 'react-icons/fa';
+import DeleteModal from '../../../components/shared/DeleteModal';
 import CustomDeleteModal from '../../../components/shared/CustomDeleteModal';
+// import CustomDeleteModal from '../../../components/shared/CustomDeleteModal';
 
 
 
@@ -18,14 +20,14 @@ export const contactData = [
 
 
 const UsersList = () => {
-  
-  const [openConfirmModal, setOpenConfirmModal] = useState(false);
+
+  // const [openConfirmModal, setOpenConfirmModal] = useState(false);
   const [selectedUser, setSelectedUser] = useState<any>(null);
   const [editData, setEditData] = useState<any | null>(null);
   const [open, setOpen] = useState(false);
   const [form] = Form.useForm();
 
-
+  const [openConfirmModal, setOpenConfirmModal] = useState(false);
 
 
 
@@ -56,7 +58,7 @@ const UsersList = () => {
           <Tooltip title="Edit">
             <FaRegEdit
               className="text-[#009A54] cursor-pointer"
-              size={20}
+              size={18}
               onClick={() => {
                 setEditData(record);
                 setOpen(true);
@@ -65,7 +67,7 @@ const UsersList = () => {
           </Tooltip>
           <FaRegTrashAlt
             className="text-red-600 cursor-pointer"
-            size={24}
+            size={18}
             onClick={() => {
               setSelectedUser(record);
               setOpenConfirmModal(true);
@@ -96,9 +98,10 @@ const UsersList = () => {
   return (
     <div className="bg-white rounded-xl">
       <div className="flex items-center justify-between px-6 py-6">
-        <h1 className="font-semibold text-2xl text-[#009A54]">All Registry Users</h1>
+        <h1 className="font-semibold text-2xl text-[#009A54]">Contact</h1>
 
-        <Button onClick={() => {setOpen(true);
+        <Button onClick={() => {
+          setOpen(true);
         }} type='primary' size='large'>Add Contact</Button>
       </div>
 
@@ -114,17 +117,23 @@ const UsersList = () => {
         setOpen={setOpenConfirmModal}
         onConfirm={handleDelete}
         title="Are you sure you want to delete this user?"
-      />
+      /> 
       <Modal
-        title="Enter Your Email"
+        title={<p className="text-xl font-semibold text-[#009A54]">Add Contact</p>}
         centered
         open={open}
-        onCancel={() => setOpen(false)}
+        onCancel={() => {
+          setOpen(false);
+          setEditData(null);
+          form.resetFields();
+        }}
         footer={false}
-        okText="Submit"
-        okButtonProps={{ size: 'large' }}
-        cancelButtonProps={{ size: 'large' }}
       >
+        {/* N.B. message at the top, clean and subtle */}
+        <div className="bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 px-4 py-2 rounded-md text-xs mb-4">
+          <span className="font-semibold">Note:</span> Client form messages will arrive at this email.
+        </div>
+
         <Form form={form} layout="vertical" onFinish={handleFinish}>
           <Form.Item
             name="email"
@@ -136,7 +145,8 @@ const UsersList = () => {
           >
             <Input placeholder="example@email.com" size="large" />
           </Form.Item>
-          <div className="flex justify-center">
+
+          <div className="flex justify-center mt-6">
             <Button type="primary" size="large" htmlType="submit">
               {editData ? 'Update Contact' : 'Add Contact'}
             </Button>

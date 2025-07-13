@@ -1,23 +1,24 @@
 import { FaExclamationTriangle } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
 
-const CustomDeleteModal = ({
+const DeleteModal = ({
   open,
   setOpen,
   onConfirm,
-  title = "Are you sure you want to delete this?",
-  productName,
+  title = "Delete",
+  description = "Are you sure you would like to do this?",
 }: {
   open: boolean;
   setOpen: (val: boolean) => void;
   onConfirm: () => void;
   title?: string;
-  productName?: string;
+  description?: string;
 }) => {
   if (!open) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+    {/* <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/10 bg-opacity-40 backdrop-blur-xs"> */}
       <div className="bg-white rounded-2xl shadow-xl w-[90%] max-w-sm relative p-6">
         {/* Close button */}
         <button
@@ -35,10 +36,15 @@ const CustomDeleteModal = ({
         </div>
 
         {/* Title */}
-        <h2 className="text-center text-lg font-semibold text-gray-900 mb-10">
+        <h2 className="text-center text-lg font-semibold text-gray-900 mb-1">
           {title}
         </h2>
-        
+
+        {/* Description */}
+        <p className="text-center text-sm text-gray-500 mb-6">
+          {description}
+        </p>
+
         {/* Buttons */}
         <div className="flex justify-between gap-3">
           <button
@@ -54,7 +60,7 @@ const CustomDeleteModal = ({
             }}
             className="w-full bg-red-600 text-white py-2 rounded-lg font-medium hover:bg-red-700 cursor-pointer"
           >
-            Delete
+            Confirm
           </button>
         </div>
       </div>
@@ -62,4 +68,4 @@ const CustomDeleteModal = ({
   );
 };
 
-export default CustomDeleteModal;
+export default DeleteModal;
