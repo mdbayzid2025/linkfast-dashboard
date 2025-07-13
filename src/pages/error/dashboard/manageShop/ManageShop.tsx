@@ -11,7 +11,7 @@ const ManageShop = () => {
   const [open, setOpen] = useState(false);
   const [openConfirmModal, setOpenConfirmModal] = useState(false)
   const [editData, setEditData] = useState<any | null>(null);
-
+  const [selectedProduct, setSelectedProduct] = useState(null)
 
   const tableComuln = [
     { title: "Name", dataIndex: "name", key: "name" },
@@ -31,7 +31,7 @@ const ManageShop = () => {
           <FaRegEdit
             onClick={() => { setOpen(true); setEditData(record) }}
             className="text-[#009A54] cursor-pointer" size={18} />
-          <FaRegTrashAlt onClick={() => setOpenConfirmModal(true)} className="text-red-600 cursor-pointer" size={18} />
+          <FaRegTrashAlt onClick={() => {setOpenConfirmModal(true); setSelectedProduct(record)}} className="text-red-600 cursor-pointer" size={18} />
         </div>
       ),
     },
@@ -81,7 +81,7 @@ const ManageShop = () => {
         }}
         className='transactionTable px-6'
       />
-      <CustomDeleteModal open={openConfirmModal} setOpen={setOpenConfirmModal} onConfirm={handleDelete} title="Are you sure you want to delete this product?" />
+      <CustomDeleteModal open={openConfirmModal} setOpen={setOpenConfirmModal} onConfirm={handleDelete} title={`Are you sure you want to delete ${selectedProduct?.name}?`} />
       <AddProductModal open={open} setOpen={setOpen} editData={editData} setEditData={setEditData} />
     </div>
   )
