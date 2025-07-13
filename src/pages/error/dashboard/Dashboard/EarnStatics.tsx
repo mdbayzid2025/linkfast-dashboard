@@ -9,7 +9,7 @@ const EarnStatics = () => {
   return (
     <div className='bg-white py-6 rounded-xl  w-full'>
       <div className="flex items-center justify-between px-10 mb-4">
-        <h1 className='text-xl font-bold'>Total Quotes <span className='font-normal'>Statistics</span> </h1>
+        <h1 className='text-xl font-bold'>Earning <span className='font-normal'>Statistics</span> </h1>
         <Select defaultValue="2025" size='middle' className='w-[100px]'>
           <Option value="2022">2022</Option>
           <Option value="2023">2023</Option>
