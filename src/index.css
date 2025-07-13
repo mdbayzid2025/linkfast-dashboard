@@ -3,15 +3,15 @@
 @import "tailwindcss";
 
 body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    /* font-weight: 400;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  /* font-weight: 400;
     font-style: normal; */
 }
 
-/* scroll bar */ 
+/* scroll bar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -33,25 +33,29 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #f6f6f6;
-}   
-
-.transactionTable .ant-table-thead >tr>th {
-  background-color: #009A54 !important; /* A custom light blue for this table */
-  color: #ffffff !important; /* White text for better contrast */
 }
 
-.transactionTable .ant-table-container table>thead>tr:first-child >*:first-child{
-  border-top-left-radius: 15px!important;
+.transactionTable .ant-table-thead>tr>th {
+  background-color: #009A54 !important;
+  /* A custom light blue for this table */
+  color: #ffffff !important;
+  /* White text for better contrast */
+}
+
+.transactionTable .ant-table-container table>thead>tr:first-child>*:first-child {
+  border-top-left-radius: 15px !important;
 }
 
 
-.transactionTable .ant-table-container table > thead > tr:last-child > *:last-child {
-  border-top-right-radius: 15px !important; /* Adjusted to specify the corner */
+.transactionTable .ant-table-container table>thead>tr:last-child>*:last-child {
+  border-top-right-radius: 15px !important;
+  /* Adjusted to specify the corner */
   /* Use the specific border-radius property for clarity */
 }
 
-.userTransactionsTable .ant-table-thead >tr>th{
-  background-color: #fafafa !important; /* A custom light blue for this table */  
+.userTransactionsTable .ant-table-thead>tr>th {
+  background-color: #fafafa !important;
+  /* A custom light blue for this table */
   color: black !important;
 }
 
@@ -59,23 +63,25 @@ body {
 
 
 /* Submenu height */
-.ant-menu-submenu .ant-menu-item {
-  padding-block: 0 !important; /* override default 8px */
-  margin-block: 0 !important;
-  height: 30 !important;
+.ant-menu-sub .ant-menu-item {
+  padding-block: 0px !important;
+  /* override default 8px */
+  margin-bottom: 0px !important;
+  height: 42px !important;
 }
 
 
 /* Ensure child label color stays white too */
 .ant-menu-light .ant-menu-item-selected a,
 .ant-menu-light .ant-menu-submenu-selected a {
-  transition: none !important;  
+  transition: none !important;
 }
 
 .atn-menu-title-content {
-  transition: none !important;  
+  transition: none !important;
 }
 
+/* ----------- Antd OTP Width  ---------  */
 .ant-otp-input-wrapper {
   width: 100% !important;
 }
@@ -88,4 +94,16 @@ body {
 
 .ant-otp {
   width: 100% !important;
+}
+
+/* -------- Margin Below Error Message --------- */
+.ant-form-item-explain-error {
+  margin-bottom: 15px !important;
+}
+
+
+/* --------- Menu Active bg & text color ----------- */
+.ant-menu-item:not(.ant-menu-item-selected):active {
+  background-color: #009A54 !important;
+  color: #fff !important;
 }

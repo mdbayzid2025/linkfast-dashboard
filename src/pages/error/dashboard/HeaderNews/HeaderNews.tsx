@@ -47,7 +47,7 @@ const HeaderNews = () => {
 
   return (
     <div className='bg-white  rounded-xl'>
-      <div className="flex items-center justify-between px-4 py-6">
+      <div className="flex items-center justify-between px-6 py-6">
         <h1 className='font-semibold text-2xl text-[#009A54]'>Header News</h1>
 
         <div className="flex items-center justify-end gap-5">
@@ -92,7 +92,7 @@ const HeaderNews = () => {
         pagination={{
           pageSize: 10,
         }}
-        className='transactionTable px-4'
+        className='transactionTable px-6'
       />
       <CustomDeleteModal open={openConfirmModal} setOpen={setOpenConfirmModal} onConfirm={handleDelete} title="Are you sure you want to delete this News?" />
       <AddHeaderNewsModal open={open} setOpen={setOpen} editData={editData} setEditData={setEditData} />

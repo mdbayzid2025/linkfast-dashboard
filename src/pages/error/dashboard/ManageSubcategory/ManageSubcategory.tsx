@@ -61,7 +61,7 @@ const SubCategory = () => {
 
     return (
         <div className="bg-white rounded-xl">
-            <div className="flex items-center justify-between px-4 pt-4">
+            <div className="flex items-center justify-between px-6 pt-6">
                 <h1 className="font-semibold text-2xl text-[#009A54]">Sub Category</h1>
                 <div className="flex items-center gap-4">
                     <Select
@@ -88,7 +88,7 @@ const SubCategory = () => {
                 columns={columns}
                 dataSource={filteredData}
                 pagination={{ pageSize: 10 }}
-                className="px-4 pt-4"
+                className="px-6 pt-4"
                 size="large"
             />
 

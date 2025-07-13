@@ -77,7 +77,7 @@ const Reviews = () => {
 
   return (
     <div className='bg-white rounded-xl'>
-      <div className="flex items-center justify-between px-4 pt-4">
+      <div className="flex items-center justify-between px-6 pt-6">
         <h1 className='font-semibold text-2xl text-[#009A54]'>Reviews</h1>
         <div className="flex items-center gap-4">
              <Button onClick={() => setActiveAll(!openActiveAll)} size='large' shape="round"
@@ -106,7 +106,7 @@ const Reviews = () => {
         columns={columns}
         size="large"
         pagination={{ pageSize: 10 }}
-        className='transactionTable px-4 pt-4'
+        className='transactionTable px-6 pt-4'
       />
 
       <AddReviewModal open={open} setOpen={setOpen} editData={editData} setEditData={setEditData} setReviews={setReviews} reviews={reviews} />

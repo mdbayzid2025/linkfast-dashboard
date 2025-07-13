@@ -65,7 +65,7 @@ const InterfaceSetup = () => {
 
   return (
     <div className="bg-white rounded-xl">
-      <div className="flex items-center justify-between px-4 pt-4">
+      <div className="flex items-center justify-between px-6 pt-6">
         <h1 className="font-semibold text-2xl text-[#009A54]">Interface Setup</h1>
         <Button type="primary" size="large" onClick={() => setOpen(true)}>Add Interface</Button>
       </div>
@@ -75,7 +75,7 @@ const InterfaceSetup = () => {
         columns={columns}
         pagination={false}
         size="large"
-        className="px-4 pt-4 transactionTable"
+        className="px-6 pt-4 transactionTable"
       />
 
       <AddInterfaceModal open={open} setOpen={setOpen} editData={editData} setEditData={setEditData} />

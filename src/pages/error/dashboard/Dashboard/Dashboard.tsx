@@ -1,14 +1,15 @@
-import React from 'react'
-import DashboardStats from './DashboardStats'
-import SaleChart from './SaleChart'
-import UserStatics from './UserStatics'
 import { Col, Row } from 'antd'
-import UpdateDataTable from './UpdateDataTable'
+import DashboardStats from './DashboardStats'
 import EarnStatics from './EarnStatics'
+import SaleChart from './SaleChart'
+import UpdateDataTable from './UpdateDataTable'
+import UserStatics from './UserStatics'
 
 const Dashboard = () => {
+  
   return (
     <div>
+
       <DashboardStats />
       <div className="bg-white p-4 rounded-xl mb-4">
         <Row gutter={15}>

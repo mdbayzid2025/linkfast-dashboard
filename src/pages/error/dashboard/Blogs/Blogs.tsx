@@ -91,7 +91,7 @@ const Blogs = () => {
 
   return (
     <div className="bg-white rounded-xl">
-      <div className="flex items-center justify-between px-4 pt-4">
+      <div className="flex items-center justify-between px-6 pt-4">
         <h1 className="font-semibold text-2xl text-[#009A54]">Manage Blogs</h1>
         <Button type="primary" size="large" onClick={() => setOpen(true)}>
           Add Blog
@@ -99,7 +99,7 @@ const Blogs = () => {
       </div>
 
       <Table
-        className="px-4 pt-4 transactionTable"
+        className="px-6 pt-4 transactionTable"
         columns={columns}
         dataSource={blogs}
         pagination={false}

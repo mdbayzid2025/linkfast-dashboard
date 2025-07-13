@@ -15,8 +15,8 @@ const Terms = ({placeholder} : any) => {
   };
 
   return (
-    <div className='bg-white p-4 rounded-2xl'>
-       <h1 className="font-semibold text-2xl text-[#009A54]">Terms</h1>
+    <div className='bg-white p-6 rounded-2xl'>
+       <h1 className="font-semibold text-2xl text-[#009A54] mb-6">Terms</h1>
       <JoditEditor
         
         ref={editor}

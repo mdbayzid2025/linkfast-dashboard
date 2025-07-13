@@ -65,7 +65,7 @@ const Sidebar = () => {
           itemActiveBg: "#286a25",
           itemBorderRadius: "10px 0 10px 0" as any,
           itemHeight: 45,
-          itemMarginBlock: 12,        
+          itemMarginBlock: 12,                  
         }
       }
     }}>
@@ -86,7 +86,7 @@ const Sidebar = () => {
             }}
           >
 
-            <img src='/Layer_1.png' className="mx-auto h-[80px] w-[100px] " alt='logo' />
+            <img src='/Layer_1.png' className="mx-auto h-[80px] w-[100px] object-cover overflow-visible" alt='logo' />
           </div>
         </Link>
 
@@ -94,7 +94,7 @@ const Sidebar = () => {
           style={{
             display: "flex",
             flexDirection: "column",
-            height: "calc(100vh - 120px)",
+            height: "calc(100vh - 120px)",            
           }}
         >
           <Menu

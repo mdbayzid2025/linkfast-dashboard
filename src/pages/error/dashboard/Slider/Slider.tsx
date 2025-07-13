@@ -52,7 +52,7 @@ const Slider = () => {
 
   return (
     <div className='bg-white  rounded-xl'>
-      <div className="flex items-center justify-between px-4 pt-4">
+      <div className="flex items-center justify-between px-6 pt-6">
         <h1 className='font-semibold text-2xl text-[#009A54]'>All Slider</h1>
         <div className="flex items-center gap-4">
           <Button onClick={() => setActiveAll(!openActiveAll)} size='large' shape="round"
@@ -91,7 +91,7 @@ const Slider = () => {
       <Table dataSource={sliderData} columns={tableComuln} size="large"
         pagination={{
           pageSize: 10,
-        }} className='transactionTable px-4 pt-4'
+        }} className='transactionTable px-6 pt-4'
       />
       <AddSliderModal open={open} setOpen={setOpen} editData={editData} setEditData={setEditData} />
       <CustomDeleteModal open={openConfirmModal} setOpen={setOpenConfirmModal} onConfirm={handleDelete} title="Are you sure you want to delete this News?" />

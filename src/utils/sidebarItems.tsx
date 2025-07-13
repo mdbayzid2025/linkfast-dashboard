@@ -6,7 +6,7 @@ import { LiaUserSolid } from "react-icons/lia";
 import { PiMoney, PiUsers } from "react-icons/pi";
 import { RxDashboard } from "react-icons/rx";
 import type { TSidebarItem } from "./generateSidebarItems";
-import { AppstoreOutlined, EditOutlined, InfoCircleOutlined } from "@ant-design/icons";
+import { AppstoreOutlined, EditOutlined, InfoCircleOutlined, MessageOutlined } from "@ant-design/icons";
 import { CiEdit, CiMoneyBill } from "react-icons/ci";
 import { TfiLayoutSlider } from "react-icons/tfi";
 import { MdOutlineCategory, MdOutlinePolicy, MdOutlineReviews } from "react-icons/md";
@@ -56,62 +56,63 @@ export const sidebarItems: TSidebarItem[] = [
       {
         key: "header-news",
         label: "Header News",
-        icon: <CiEdit style={{ fontSize: '24px' }} />,
+        icon: <CiEdit style={{ fontSize: '20px' }} />,
         path: "header-news",
       },
       {
         key: "slider",
         label: "Slider",
-        icon: <TfiLayoutSlider style={{ fontSize: '24px' }} />,
+        icon: <TfiLayoutSlider style={{ fontSize: '20px' }} />,
         path: "slider",
       },
 
       {
         key: "category",
         label: "Manage SIM Category",
-        icon: <MdOutlineCategory style={{ fontSize: '24px' }} />,
+        icon: <MdOutlineCategory style={{ fontSize: '20px' }} />,
         path: "category",
       },
       {
         key: "interface-setup",
         label: "Interface Setup",
-        icon: <TbAffiliate style={{ fontSize: '24px' }} />,
+        icon: <TbAffiliate style={{ fontSize: '20px' }} />,
         path: "interface-setup",
       },
       {
         key: "blogs",
         label: "Blog",
-        icon: <HiOutlineDocumentChartBar style={{ fontSize: '24px' }} />,
+        icon: <HiOutlineDocumentChartBar style={{ fontSize: '20px' }} />,
         path: "blogs",
       },
       {
         key: "reviews",
         label: "Reviews",
-        icon: <MdOutlineReviews style={{ fontSize: '24px' }} />,
+        icon: <MdOutlineReviews style={{ fontSize: '20px' }} />,
         path: "reviews",
       },
       {
         key: "coupon",
         label: "Coupon",
-        icon: <PiMoney style={{ fontSize: '24px' }} />,
+        icon: <PiMoney style={{ fontSize: '20px' }} />,
         path: "coupon",
       },
       {
         key: "about",
         label: "About",
-        icon: <InfoCircleOutlined style={{ fontSize: '24px' }} />,
+        icon: <InfoCircleOutlined style={{ fontSize: '20px' }} />,
         path: "about",
       },
       {
         key: "why-use",
         label: "Why Use",
-        icon: <RiQuestionMark style={{ fontSize: '24px' }} />,
+        icon: <RiQuestionMark style={{ fontSize: '20px' }} />,
         path: "why-use",
       },
       {
         key: "faq",
         label: "FAQ",
-        icon: <FaQ style={{ fontSize: '24px' }} />,
+        // icon: <FaQ style={{ fontSize: '20px' }} />,
+        icon: <MessageOutlined style={{ fontSize: '20px' }} />,
         path: "faq",
       },
 
@@ -119,19 +120,19 @@ export const sidebarItems: TSidebarItem[] = [
       {
         key: "terms",
         label: "Terms",
-        icon: <BsListTask style={{ fontSize: '24px' }} />,
+        icon: <BsListTask style={{ fontSize: '20px' }} />,
         path: "terms",
       },
       {
         key: "contact",
         label: "Contact",
-        icon: <LuContact style={{ fontSize: '24px' }} />,
+        icon: <LuContact style={{ fontSize: '20px' }} />,
         path: "contact",
       },
       {
         key: "policy",
         label: "Policy",
-        icon: <MdOutlinePolicy style={{ fontSize: '24px' }} />,
+        icon: <MdOutlinePolicy style={{ fontSize: '20px' }} />,
         path: "policy",
       },
 

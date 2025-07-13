@@ -97,7 +97,7 @@ const UsersList = () => {
 
   return (
     <div className="bg-white rounded-xl">
-      <div className="flex items-center justify-between px-4 py-6">
+      <div className="flex items-center justify-between px-6 py-6">
         <h1 className="font-semibold text-2xl text-[#009A54]">All Registry Users</h1>
 
         <Button onClick={() => {setOpen(true);
@@ -108,7 +108,7 @@ const UsersList = () => {
         columns={userColumns}
         dataSource={contactData}
         pagination={{ pageSize: 5 }}
-        className='transactionTable px-4'
+        className='transactionTable px-6'
       />
 
       <CustomDeleteModal
@@ -119,6 +119,7 @@ const UsersList = () => {
       />
       <Modal
         title="Enter Your Email"
+        centered
         open={open}
         onCancel={() => setOpen(false)}
         footer={false}

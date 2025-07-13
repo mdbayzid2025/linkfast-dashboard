@@ -18,7 +18,7 @@ const TransactionDetails = () => {
 
   return (
     <div className='bg-white  rounded-xl'>
-      <div className="flex items-center justify-between px-4 pt-4">
+      <div className="flex items-center justify-between px-6 pt-6">
         <h1 className='font-semibold text-2xl text-[#009A54]'>Transaction Details</h1>
       <div className="relative">
             <Input
@@ -40,7 +40,6 @@ const TransactionDetails = () => {
                   }}
 
                 />
-
               }
             />
 
@@ -49,7 +48,7 @@ const TransactionDetails = () => {
       <Table dataSource={transactionData} columns={tableComuln} size="large" 
       pagination={{
         pageSize: 10,        
-      }} className='transactionTable px-4 pt-4'
+      }} className='transactionTable px-6 pt-4'
       />
     </div>
   )

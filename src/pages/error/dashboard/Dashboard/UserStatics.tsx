@@ -3,7 +3,7 @@ import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'rec
 import { userChartData } from '../../../../data/Chart/UserChartData'
 import { Select } from 'antd'
 
-const {Option} = Select;
+const { Option } = Select;
 
 const UserStatics = () => {
     return (
@@ -29,7 +29,12 @@ const UserStatics = () => {
                     </defs>
                     <XAxis dataKey="month" />
                     <YAxis />
-                    <Tooltip />
+                    <Tooltip
+                        cursor={{
+                            stroke: 'rgba(0, 154, 84, .5)',
+                            strokeWidth: 3,
+                        }}
+                    />
                     <Area type="monotone" dataKey="totalActive" stroke="#009A54" fillOpacity={1} fill="url(#colorUser)" />
                 </AreaChart>
             </ResponsiveContainer>

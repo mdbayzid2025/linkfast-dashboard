@@ -15,8 +15,8 @@ const Policy = ({placeholder} : any) => {
   };
 
   return (
-    <div className='bg-white p-4 rounded-2xl'>
-       <h1 className="font-semibold tex-2xl text-[#009A54]">Policy</h1>
+    <div className='bg-white p-6 rounded-2xl'>
+       <h1 className="font-semibold text-2xl text-[#009A54] mb-6">Policy</h1>        
       <JoditEditor
         
         ref={editor}
