@@ -66,7 +66,7 @@ const Login = () => {
                 <Form.Item style={{marginBottom: 0}}  name="remember" valuePropName="checked" label={null}>
                   <Checkbox style={{fontSize: 18}}>Remember me</Checkbox>
                 </Form.Item>
-                <Link className='text-lg font-normal' to="/forget-password">Forget Password?</Link>
+                <Link className='text-sm font-medium' to="/forget-password">Forget Password?</Link>
               </div>
 
               <div className="flex items-center justify-center">

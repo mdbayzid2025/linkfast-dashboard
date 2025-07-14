@@ -75,7 +75,7 @@ const NewPassword = () => {
                                 <Input type="password" style={{ height: 42, }} placeholder="#ABC@1565!" />
                             </Form.Item>
 
-                            <Link to="/verify-otp">
+                            <Link to="/">
                                 <div className="flex items-center justify-center">
                                     <Button style={{ width: "100%" }} type="primary" size="large" htmlType="submit">
                                         Update Password

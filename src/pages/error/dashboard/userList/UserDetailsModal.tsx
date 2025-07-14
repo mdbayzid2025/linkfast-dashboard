@@ -27,43 +27,42 @@ const UserDetailsModal = ({ open, setOpen, userData }: {
     ];
     return (
         <Modal
-        // title="User Details"
-            title={<p className="text-xl font-semibold text-[#009A54]">User Details</p>}
+            // title="User Details"    
             centered
+            title={<p className="text-xl font-semibold text-[#009A54]">User Details</p>}
             open={open}
-            width={800}
-            height="70%"
+            width={1000}            
             onCancel={handleCloseModal}
             footer={false}
         >
-            <Row style={{marginTop: 24}} gutter={30}>
+            <Row style={{ marginTop: 24 }} gutter={30}>
                 <Col span={7}>
-                <div className="w-full h-[150px]">
-                <img src={userData?.image} className="h-full w-full object-cover" alt="" />
-                </div>
+                    <div className="w-full h-[150px]">
+                        <img src={userData?.image} className="h-full w-full object-cover" alt="" />
+                    </div>
                 </Col>
                 <Col span={14}>
-                <Row gutter={[24, 12]}>
-                    <Col style={{fontSize: 16, fontWeight: 600}} span={8}>Name</Col>
-                    <Col style={{fontSize: 16, fontWeight: 600}}  className='text-xl' span={16}>: {userData?.name}</Col>
+                    <Row gutter={[24, 12]}>
+                        <Col style={{ fontSize: 16, fontWeight: 600 }} span={8}>Name</Col>
+                        <Col style={{ fontSize: 16, fontWeight: 600 }} className='text-xl' span={16}>: {userData?.name}</Col>
 
-                    <Col style={{fontSize: 16 }} className='text-xl' span={8}>Email</Col>
-                    <Col  style={{fontSize: 16 }} className='text-xl' span={16}>: {userData?.email}</Col>
+                        <Col style={{ fontSize: 16 }} className='text-xl' span={8}>Email</Col>
+                        <Col style={{ fontSize: 16 }} className='text-xl' span={16}>: {userData?.email}</Col>
 
-                    <Col  style={{fontSize: 16 }} className='text-xl' span={8}>Contact</Col>
-                    <Col  style={{fontSize: 16 }} className='text-xl' span={16}>: {userData?.contact}</Col>
+                        <Col style={{ fontSize: 16 }} className='text-xl' span={8}>Contact</Col>
+                        <Col style={{ fontSize: 16 }} className='text-xl' span={16}>: {userData?.contact}</Col>
 
-                    <Col  style={{fontSize: 16 }} className='text-xl' span={8}>Country</Col>
-                    <Col  style={{fontSize: 16 }} className='text-xl' span={16}>: {userData?.country}</Col>                    
-                </Row>
+                        <Col style={{ fontSize: 16 }} className='text-xl' span={8}>Country</Col>
+                        <Col style={{ fontSize: 16 }} className='text-xl' span={16}>: {userData?.country}</Col>
+                    </Row>
                 </Col>
             </Row>
             <Table
                 columns={transactionColumns}
                 dataSource={userData?.transactions}
-                pagination={{pageSize: 3}}
+                pagination={{ pageSize: 7 }}
                 rowKey="id"
-                style={{marginTop: 24}}
+                style={{ marginTop: 24 }}
                 className=''
             />
         </Modal>

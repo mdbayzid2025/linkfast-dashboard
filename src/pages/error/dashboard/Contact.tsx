@@ -131,7 +131,7 @@ const UsersList = () => {
       >
         {/* N.B. message at the top, clean and subtle */}
         <div className="bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 px-4 py-2 rounded-md text-xs mb-4">
-          <span className="font-semibold">Note:</span> Client form messages will arrive at this email.
+          <span className="font-semibold">Note:</span> Contact form messages will arrive at this email.
         </div>
 
         <Form form={form} layout="vertical" onFinish={handleFinish}>

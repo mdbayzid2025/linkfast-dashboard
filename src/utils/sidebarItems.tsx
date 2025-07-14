@@ -1,12 +1,11 @@
 
-import { InfoCircleOutlined, MessageOutlined } from "@ant-design/icons";
+import { MessageOutlined } from "@ant-design/icons";
 import { BsListTask, BsShop } from "react-icons/bs";
 import { CiEdit } from "react-icons/ci";
 import { GrTransaction } from "react-icons/gr";
 import { HiOutlineDocumentChartBar } from "react-icons/hi2";
 import { IoSettingsOutline } from "react-icons/io5";
 import { LiaUserSolid } from "react-icons/lia";
-import { LuContact } from "react-icons/lu";
 import { MdOutlineCategory, MdOutlinePolicy, MdOutlineReviews } from "react-icons/md";
 import { PiMoney, PiUsers } from "react-icons/pi";
 import { RiQuestionMark } from "react-icons/ri";
@@ -40,12 +39,7 @@ export const sidebarItems: TSidebarItem[] = [
     path: "user-list",
     icon: <LiaUserSolid style={{ fontSize: '24px' }} />,
   },
-  {
-    key: "all-admin",
-    label: "All Admin",
-    path: "all-admin",
-    icon: <PiUsers style={{ fontSize: '24px' }} />,
-  },
+ 
   {
     key: "settings",
     label: "Settings",
@@ -95,12 +89,12 @@ export const sidebarItems: TSidebarItem[] = [
         icon: <PiMoney style={{ fontSize: '20px' }} />,
         path: "coupon",
       },
-      {
-        key: "about",
-        label: "About",
-        icon: <InfoCircleOutlined style={{ fontSize: '20px' }} />,
-        path: "about",
-      },
+      // {
+      //   key: "about",
+      //   label: "About",
+      //   icon: <InfoCircleOutlined style={{ fontSize: '20px' }} />,
+      //   path: "about",
+      // },
       {
         key: "why-use",
         label: "Why Use",
@@ -122,12 +116,12 @@ export const sidebarItems: TSidebarItem[] = [
         icon: <BsListTask style={{ fontSize: '20px' }} />,
         path: "terms",
       },
-      {
-        key: "contact",
-        label: "Contact",
-        icon: <LuContact style={{ fontSize: '20px' }} />,
-        path: "contact",
-      },
+      // {
+      //   key: "contact",
+      //   label: "Contact",
+      //   icon: <LuContact style={{ fontSize: '20px' }} />,
+      //   path: "contact",
+      // },
       {
         key: "policy",
         label: "Policy",
@@ -138,5 +132,10 @@ export const sidebarItems: TSidebarItem[] = [
 
     ],
   },
-
+ {
+    key: "all-admin",
+    label: "All Admin",
+    path: "all-admin",
+    icon: <PiUsers style={{ fontSize: '24px' }} />,
+  },
 ];

@@ -6,7 +6,7 @@ const { Option } = Select;
 
 const UserStatics = () => {
     return (
-        <div className="">
+        <div className="w-full bg-white p-4 rounded-xl">
             <div className="flex items-center justify-between px-6 mb-4">
                 <h1 className='text-xl font-bold'>User <span className='font-normal'>Statistics</span> </h1>
                 <Select defaultValue="2025" size='middle' className='w-[100px]'>

@@ -1,4 +1,4 @@
-import { Button, DatePicker, Form, Input, Modal } from 'antd';
+import { Button, Form, InputNumber, Modal } from 'antd';
 import FormItem from 'antd/es/form/FormItem';
 import dayjs from 'dayjs';
 import { useEffect } from 'react';
@@ -40,7 +40,7 @@ const AddCouponModal = ({ open, setOpen, editData, setEditData }: CouponModalPro
 
   return (
     <Modal
-      title={<p className="text-xl font-semibold text-[#009A54]">{editData ? "Update Coupon" : "Add Coupon"}</p>}
+      title={<p className="text-xl font-semibold text-[#009A54]">{editData ? "Edit Coupon" : "Add Coupon"}</p>}
       open={open}
       onCancel={handleClose}
       centered
@@ -48,36 +48,24 @@ const AddCouponModal = ({ open, setOpen, editData, setEditData }: CouponModalPro
     >
       <Form form={form} layout="vertical" onFinish={onFinish} style={{ marginTop: 15 }}>
         <FormItem
-          label="Coupon Name"
-          name="name"
-          rules={[{ required: true, message: "Enter coupon name" }]}
+          label="Coupon Target"
+          name="couponTarget"
+          rules={[{ required: true, message: "Enter coupon target" }]}
         >
-          <Input style={{height: 42}} placeholder="Summer Sale, Black Friday..." />
+          <InputNumber style={{height: 42, width: "100%"}} placeholder="Enter coupon target" />
         </FormItem>
+        
         <FormItem
-          label="Code"
-          name="code"
-          rules={[{ required: true, message: "Enter coupon code" }]}
+          label="Coupon Discount"
+          name="couponDiscount"
+          rules={[{ required: true, message: "Enter coupon discount" }]}
         >
-          <Input style={{height: 42}} placeholder="SUMMER20, FLASH50" />
+          <InputNumber style={{height: 42, width: "100%"}} placeholder="Enter coupon discount" />
         </FormItem>
-        <FormItem
-          label="Start Date"
-          name="startDate"
-          rules={[{ required: true, message: "Select start date" }]}
-        >
-          <DatePicker style={{height: 42}} className="w-full" />
-        </FormItem>
-        <FormItem
-          label="End Date"
-          name="endDate"
-          rules={[{ required: true, message: "Select end date" }]}
-        >
-          <DatePicker style={{height: 42}} className="w-full" />
-        </FormItem>
+       
         <div className="flex justify-center">
           <Button type="primary" size="large" htmlType="submit">
-            {editData ? "Update Coupon" : "Add Coupon"}
+            {editData ? "Edit Coupon" : "Add Coupon"}
           </Button>
         </div>
       </Form>

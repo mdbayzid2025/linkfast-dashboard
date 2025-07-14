@@ -27,7 +27,7 @@ const WhyUse = () => {
       )
     },
    { title: "Title", dataIndex: "title", key: "title" },
-    { title: "Description", dataIndex: "description", key: "description" },
+    { title: "Description", dataIndex: "description", key: "description", render: (text: string) => text?.length > 100 ? `${text.slice(0, 100)}...` : text, },
     {
       title: "Action", dataIndex: "action",
       render: (_: any, record: any) => (

@@ -1,11 +1,12 @@
-import { Button, Table } from 'antd';
+import { Table } from 'antd';
 import { useState } from 'react';
-import { FaRegEdit, FaRegTrashAlt } from 'react-icons/fa';
+import { FaRegEdit } from 'react-icons/fa';
 import { FiInfo } from 'react-icons/fi';
 import CustomDeleteModal from '../../../../components/shared/CustomDeleteModal';
 import AddInterfaceModal from './AddInterfaceModal';
 import InterfaceDetailsModal from './InterfaceDetailsModal';
 
+import interfaceBG from "/interfaceBg.png";
 
 const InterfaceSetup = () => {
   const [open, setOpen] = useState(false);
@@ -19,7 +20,7 @@ const InterfaceSetup = () => {
       key: '1',
       title: 'Invite & Earn',
       description: 'Help your friends save and get rewarded together!Share your link with friends. Once they join and make a purchase, you’ll both receive rewards like bonus data or store credit automatically',
-      image: 'https://images.pexels.com/photos/7986991/pexels-photo-7986991.jpeg',
+      image: interfaceBG,
     }
   ];
 
@@ -49,11 +50,11 @@ const InterfaceSetup = () => {
             className="text-[#009A54] cursor-pointer"
             size={18}
           />
-          <FaRegTrashAlt
+          {/* <FaRegTrashAlt
             onClick={() => setOpenConfirmModal(true)}
             className="text-red-600 cursor-pointer"
             size={18}
-          />
+          /> */}
         </div>
       )
     }
@@ -67,7 +68,7 @@ const InterfaceSetup = () => {
     <div className="bg-white rounded-xl">
       <div className="flex items-center justify-between px-6 pt-6">
         <h1 className="font-semibold text-2xl text-[#009A54]">Interface Setup</h1>
-        <Button type="primary" size="large" onClick={() => setOpen(true)}>Add Interface</Button>
+        {/* <Button type="primary" size="large" onClick={() => setOpen(true)}>Add Interface</Button> */}
       </div>
 
       <Table

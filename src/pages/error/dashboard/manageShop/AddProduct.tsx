@@ -63,7 +63,7 @@ const AddProductModal = ({ open, setOpen, editData, setEditData }: AddProductMod
 
     return (
         <Modal
-            title={<p className="text-xl font-semibold text-[#009A54]">{editData ? "Update Product" : "Add New Product"}</p>}
+            title={<p className="text-xl font-semibold text-[#009A54]">{editData ? "Edit Product" : "Add New Product"}</p>}
             open={open}
             onCancel={handleCancel}
             footer={null}
@@ -172,7 +172,7 @@ const AddProductModal = ({ open, setOpen, editData, setEditData }: AddProductMod
 
                     <div className="flex justify-center gap-2 pt-4 col-span-2">
                         <Button type="primary" size="large" htmlType="submit">
-                            {editData ? "Update Product" : "Add New Product"}
+                            {editData ? "Edit Product" : "Add New Product"}
                         </Button>
                     </div>
                 </div>

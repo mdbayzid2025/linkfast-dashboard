@@ -1,8 +1,8 @@
 import { SearchOutlined } from '@ant-design/icons';
-import { Button, Input, Rate, Table, Tooltip } from 'antd';
+import { Button, Input, Table, Tooltip } from 'antd';
 import { useState } from 'react';
-import { FaRegEdit, FaRegEye, FaRegEyeSlash, FaRegTrashAlt } from 'react-icons/fa';
-import CustomDeleteModal from '../../../../components/shared/CustomDeleteModal';
+import { FaRegEdit, FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
+
 import AddReviewModal from './AddReviewModal';
 
 
@@ -10,28 +10,9 @@ const Reviews = () => {
   const [reviews, setReviews] = useState(initaialReviewsData);
   const [open, setOpen] = useState(false);
   const [editData, setEditData] = useState<any | null>(null);
-  const [openConfirmModal, setOpenConfirmModal] = useState(false);
-  const [selectedKey, setSelectedKey] = useState("");
-
     
   const [openActiveAll, setActiveAll] = useState(false);
 
-  // ------ Rating Title --------
-  const desc = ['terrible', 'bad', 'normal', 'good', 'wonderful'];
-
-  const handleDelete = () => {
-    setReviews(reviews.filter((r) => r.key !== selectedKey));
-    setOpenConfirmModal(false);
-  };
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'Pending': return 'text-yellow-500';
-      case 'Accepted': return 'text-green-600';
-      case 'Rejected': return 'text-red-600';
-      default: return '';
-    }
-  };
 
   const columns = [
     { title: "Sl No.", dataIndex: "key", key: "key" },
@@ -44,9 +25,8 @@ const Reviews = () => {
           <p className='text-[16px] font-medium'>{record.name}</p>
         </div>
       )},
-    { title: "Review", render:(_:any, record:any)=>(
-       <Rate tooltips={desc} disabled value={record.rating} />
-    ) },
+    { title: "Country", dataIndex: "country", key: "country" },    
+     { title: 'Review', dataIndex: 'review', key: 'review', render: (text: string) => text?.length > 100 ? `${text.slice(0, 100)}...` : text, },
     { title: "Rating", dataIndex: "rating", key: "rating" },
     {
       title: "Action",
@@ -56,18 +36,10 @@ const Reviews = () => {
               onClick={() => { setOpen(true); setEditData(record); }}
               className="text-[#009A54] cursor-pointer"
               size={18}
-            />          
-          <FaRegTrashAlt
-            onClick={() => {
-              setSelectedKey(record.key);
-              setOpenConfirmModal(true);
-            }}
-            className="text-red-600 cursor-pointer"
-            size={18}
-          />
+            />                    
           <Tooltip title={record.status}>
-            {record.status ==="Accepted" ? <FaRegEye className={`${getStatusColor(record.status)} cursor-pointer`} size={18} /> 
-            : <FaRegEyeSlash className={`${getStatusColor(record.status)} cursor-pointer`} size={18} />
+            {record.status ==="Accepted" ? <FaRegEye className={`text-green-600 cursor-pointer`} size={18} /> 
+            : <FaRegEyeSlash className={`text-red-600 cursor-pointer`} size={18} />
             }
           </Tooltip>
         </div>
@@ -110,13 +82,6 @@ const Reviews = () => {
       />
 
       <AddReviewModal open={open} setOpen={setOpen} editData={editData} setEditData={setEditData} setReviews={setReviews} reviews={reviews} />
-
-      <CustomDeleteModal
-        open={openConfirmModal}
-        setOpen={setOpenConfirmModal}
-        onConfirm={handleDelete}
-        title="Are you sure you want to delete this review?"
-      />
     </div>
   );
 };
@@ -131,6 +96,7 @@ const initaialReviewsData = [
     key: '1',
     name: 'John Doe',
     photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
+    country: "USA",
     review: 'Excellent service!',
     status: 'Accepted',
     rating: 5,
@@ -139,6 +105,7 @@ const initaialReviewsData = [
     key: '2',
     name: 'Jane Smith',
     photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
+    country: "USA",
     review: 'Still waiting...',
     status: 'Pending',
     rating: 2,
@@ -147,6 +114,7 @@ const initaialReviewsData = [
     key: '3',
     name: 'Tom Jackson',
     photo: "https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg",
+    country: "USA",
     review: 'Damaged product.',
     status: 'Rejected',
     rating: 1,
