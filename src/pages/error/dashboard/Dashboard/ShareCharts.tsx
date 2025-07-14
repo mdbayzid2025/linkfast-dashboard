@@ -2,7 +2,7 @@ import { Select } from 'antd';
 import { Bar, BarChart, CartesianGrid, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 
-const {Option} = Select;
+const { Option } = Select;
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#FF4560', '#775DD0', '#00E396', '#FEB019', '#FF66C3', '#546E7A', '#26A69A', '#D10CE8'];
 
@@ -34,7 +34,7 @@ const ShareChart = () => {
                 <h1 className="text-xl font-bold">
                     Share <span className="font-normal">Statistics</span>
                 </h1>
-                <div className="flex items-center gap-6">                    
+                <div className="flex items-center gap-6">
                     <Select defaultValue="2025" size="middle" className="w-[100px]">
                         <Option value="2022">2022</Option>
                         <Option value="2023">2023</Option>
@@ -55,7 +55,7 @@ const ShareChart = () => {
                     <Tooltip />
                     {/* <Bar dataKey="share" shape={<TriangleBar />} label={{ position: 'top' }}> */}
                     <Bar dataKey="share" barSize={10} label={{ position: 'top' }}>
-                        {data.map( (index: any) => (
+                        {data.map((_, index) => (
                             <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
                         ))}
                     </Bar>
