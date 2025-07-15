@@ -42,7 +42,7 @@ const SubCategory = () => {
             render: (_: any, record: any) => (
                 <div className="flex items-center gap-3">
                     <FaRegEdit onClick={() => { setOpen(true); setEditData(record); }} className="text-[#009A54] cursor-pointer" size={18} />
-                    <FaRegTrashAlt onClick={() => setDeleteModal(true)} className="text-red-600 cursor-pointer" size={18} />
+                  
                     <Tooltip title={record.status}>
                         {selectedSubCategory === record.key || record.status === "active" ? (
                             <FaRegEye onClick={() => setSelectedSubCategory(record.key)} className="text-green-600 cursor-pointer" size={18} />
@@ -50,6 +50,7 @@ const SubCategory = () => {
                             <FaRegEyeSlash onClick={() => setSelectedSubCategory(record.key)} className="text-red-600 cursor-pointer" size={18} />
                         )}
                     </Tooltip>
+                      <FaRegTrashAlt onClick={() => setDeleteModal(true)} className="text-red-600 cursor-pointer" size={18} />
                 </div>
             )
         }

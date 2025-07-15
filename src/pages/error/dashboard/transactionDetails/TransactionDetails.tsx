@@ -5,11 +5,13 @@ import { transactionData } from '../../../../data/TransactionData'
 const TransactionDetails = () => {
   
   const tableComuln  = [
-    {title: "Name", dataIndex : "name", key:"name"},
+    {title: "Sim Name", dataIndex : "name", key:"name"},
+    {title: "Data", dataIndex : "data", key:"data"},
     {title: "Price", dataIndex : "price", key:"price"},
-    {title: "Buyer Name", dataIndex : "buyerName", key:"buyerName"},
-    {title: "Email", dataIndex : "buyerEmail", key:"buyerEmail"},
-    {title: "Contact", dataIndex : "contact", key:"contact"},
+    {title: "Country", dataIndex : "country", key:"country"},
+    {title: "Sub Category", dataIndex : "subCategory", key:"subCategory"},
+    {title: "Category", dataIndex : "category", key:"category"},
+    {title: "Validity", dataIndex : "validity", key:"validity"},
     {title: "Date", dataIndex : "date", key:"date"},
     {title: "Transaction ID.", dataIndex : "transactionId", key:"transactionId"},
   ]

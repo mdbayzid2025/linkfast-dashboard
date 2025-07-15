@@ -59,7 +59,7 @@ const AddReviewModal = ({ open, setOpen, editData, setEditData, reviews, setRevi
         <Form.Item name="status" label="Status" rules={[{ required: true, message: "Select status" }]}>
           <Select style={{height: 42}} placeholder="Select status">
             <Select.Option style={{height:42}} value="Pending">Pending</Select.Option>
-            <Select.Option style={{height:42}} value="Accepted">Accepted</Select.Option>
+            <Select.Option style={{height:42}} value="Published">Published</Select.Option>
             <Select.Option style={{height:42}} value="Rejected">Rejected</Select.Option>
           </Select>
         </Form.Item>

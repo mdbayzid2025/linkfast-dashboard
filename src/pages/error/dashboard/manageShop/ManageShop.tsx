@@ -2,32 +2,44 @@ import { SearchOutlined } from '@ant-design/icons'
 import { Button, Input, Table } from 'antd'
 import { useState } from 'react'
 import { FaRegEdit, FaRegTrashAlt } from 'react-icons/fa'
-import { FiPlus } from 'react-icons/fi'
+import { FiInfo, FiPlus } from 'react-icons/fi'
 import CustomDeleteModal from '../../../../components/shared/CustomDeleteModal'
 import { productData } from '../../../../data/ProductsData'
 import AddProductModal from './AddProduct'
+import ProductDetails from './ProductDetails'
 
 const ManageShop = () => {  
   const [open, setOpen] = useState(false);
   const [openConfirmModal, setOpenConfirmModal] = useState(false)
   const [editData, setEditData] = useState<any | null>(null);
-
+  
+  const [selectSimData, setSelectedSimData] = useState<any | null>(null);
+  const [openDetailsModal, setOpenDetailsModal] = useState(!false);
 
   const tableComuln = [
-    { title: "Name", dataIndex: "name", key: "name" },
+    { title: "Sim Name", dataIndex: "name", key: "name" },
+    { title: "Category", dataIndex: "category", key: "category" },
+    { title: "Sub-Category", dataIndex: "subcategory", key: "subcategory" },
     { title: "Country", dataIndex: "country", key: "country" },
     { title: "Data", dataIndex: "data", key: "data" },
     { title: "Validity", dataIndex: "validity", key: "validity" },
     { title: "Price", dataIndex: "price", key: "price" },
-    { title: "Network", dataIndex: "network", key: "network" },
-    { title: "Activation Type", dataIndex: "activationType", key: "activationType" },
-    { title: "Delivery", dataIndex: "delivery", key: "delivery" },
+
+    { title: "Activation Type", dataIndex: "activationType", key: "activationType" },    
     {
       title: "Action", dataIndex: "action",
       render: (_: any, record: any) => (
         <div
           className="flex items-center gap-4"
         >
+            <FiInfo size={18}
+                      className="text-[#009A54] cursor-pointer"            
+                      onClick={() => {
+                        setSelectedSimData(record);
+                        setOpenDetailsModal(!openDetailsModal);                        
+                      }}
+                    />
+
           <FaRegEdit
             onClick={() => { setOpen(true); setEditData(record) }}
             className="text-[#009A54] cursor-pointer" size={18} />
@@ -42,6 +54,7 @@ const ManageShop = () => {
     console.log("Product deleted!");
   };
 
+    
   return (
     <div className='bg-white  rounded-xl'>
       <div className="flex items-center justify-between px-6 py-6">
@@ -83,6 +96,7 @@ const ManageShop = () => {
       />
       <CustomDeleteModal open={openConfirmModal} setOpen={setOpenConfirmModal} onConfirm={handleDelete} title={`Are you sure you want to delete product?`} />
       <AddProductModal open={open} setOpen={setOpen} editData={editData} setEditData={setEditData} />
+      <ProductDetails  open={openDetailsModal} setOpen={setOpenDetailsModal} product={selectSimData}/>
     </div>
   )
 }
