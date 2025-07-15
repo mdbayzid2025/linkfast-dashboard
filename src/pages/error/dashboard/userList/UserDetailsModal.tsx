@@ -11,8 +11,7 @@ const UserDetailsModal = ({ open, setOpen, userData }: {
 
     const transactionColumns = [
         { title: 'Transaction ID', dataIndex: 'id', key: 'id' },
-        { title: 'SIM Name', dataIndex: 'simName', key: 'simName' },
-        { title: 'Network', dataIndex: 'network', key: 'network' },
+        { title: 'SIM Name', dataIndex: 'simName', key: 'simName' },        
         { title: 'Price', dataIndex: 'price', key: 'price' },
         { title: 'Validity', dataIndex: 'validity', key: 'validity' },
         { title: 'Date', dataIndex: 'date', key: 'date' },

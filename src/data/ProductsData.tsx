@@ -15,8 +15,7 @@ export const productData = [
     validityPolicy: "The validity period starts when the eSIM connects to a mobile network in its coverage area. If you install the eSIM outside of the coverage area, you can connect to a network when you arrive",
     otherInfo: "Restrictions apply to extended usage(over 91 days) in Turkey according to the local legislation",
     category: "Local eSIMs",
-    subcategory: "North America",
-    activationType: "Manual QR",
+    subcategory: "North America",    
     delivery: "Instant Email",
   },
   {
@@ -33,8 +32,7 @@ export const productData = [
     validityPolicy: "The validity period starts when the eSIM connects to a mobile network in its coverage area. If you install the eSIM outside of the coverage area, you can connect to a network when you arrive",
     otherInfo: "Restrictions apply to extended usage(over 91 days) in Turkey according to the local legislation",
     category: "Local eSIMs",
-    subcategory: "Europe",
-    activationType: "Instant QR",
+    subcategory: "Europe",    
     delivery: "Instant Email",
   },
   {
@@ -51,8 +49,7 @@ export const productData = [
     validityPolicy: "The validity period starts when the eSIM connects to a mobile network in its coverage area. If you install the eSIM outside of the coverage area, you can connect to a network when you arrive",
     otherInfo: "Restrictions apply to extended usage(over 91 days) in Turkey according to the local legislation",
     category: "Regional eSIMs",
-    subcategory: "Europe",
-    activationType: "Instant QR",
+    subcategory: "Europe",    
     delivery: "Instant Email",
   },
   {
@@ -69,8 +66,7 @@ export const productData = [
     validityPolicy: "The validity period starts when the eSIM connects to a mobile network in its coverage area. If you install the eSIM outside of the coverage area, you can connect to a network when you arrive",
     otherInfo: "Restrictions apply to extended usage(over 91 days) in Turkey according to the local legislation",
     category: "Local eSIMs",
-    subcategory: "Middle East",
-    activationType: "Manual QR",
+    subcategory: "Middle East",    
     delivery: "Email in 1 hour",
   },
   {
@@ -87,8 +83,7 @@ export const productData = [
     validityPolicy: "The validity period starts when the eSIM connects to a mobile network in its coverage area. If you install the eSIM outside of the coverage area, you can connect to a network when you arrive",
     otherInfo: "Restrictions apply to extended usage(over 91 days) in Turkey according to the local legislation",
     category: "Local eSIMs",
-    subcategory: "Asia",
-    activationType: "Manual",
+    subcategory: "Asia",    
     delivery: "Manual Email",
   },
   {
@@ -105,8 +100,7 @@ export const productData = [
     validityPolicy: "The validity period starts when the eSIM connects to a mobile network in its coverage area. If you install the eSIM outside of the coverage area, you can connect to a network when you arrive",
     otherInfo: "Restrictions apply to extended usage(over 91 days) in Turkey according to the local legislation",
     category: "Local eSIMs",
-    subcategory: "North America",
-    activationType: "Instant QR",
+    subcategory: "North America",    
     delivery: "Instant Email",
   },
   {
@@ -123,8 +117,7 @@ export const productData = [
     validityPolicy: "The validity period starts when the eSIM connects to a mobile network in its coverage area. If you install the eSIM outside of the coverage area, you can connect to a network when you arrive",
     otherInfo: "Restrictions apply to extended usage(over 91 days) in Turkey according to the local legislation",
     category: "Local eSIMs",
-    subcategory: "Asia",
-    activationType: "Instant QR",
+    subcategory: "Asia",    
     delivery: "Instant Email",
   },
   {
@@ -141,8 +134,7 @@ export const productData = [
   validityPolicy: "The validity period starts when the eSIM connects to a mobile network in its coverage area. If you install the eSIM outside of the coverage area, you can connect to a network when you arrive",
   otherInfo: "Restrictions apply to extended usage(over 91 days) in Turkey according to the local legislation",
   category: "Global eSIMs",
-  subcategory: "Data",
-  activationType: "Instant QR",
+  subcategory: "Data",  
   delivery: "Instant Email",
 },
 {
@@ -159,8 +151,7 @@ export const productData = [
   validityPolicy: "The validity period starts when the eSIM connects to a mobile network in its coverage area. If you install the eSIM outside of the coverage area, you can connect to a network when you arrive",
   otherInfo: "Restrictions apply to extended usage(over 91 days) in Turkey according to the local legislation",
   category: "Global eSIMs",
-  subcategory: "Data/Call/Texts",
-  activationType: "Instant QR",
+  subcategory: "Data/Call/Texts",  
   delivery: "Instant Email",
 },
 {
@@ -177,8 +168,7 @@ export const productData = [
   validityPolicy: "The validity period starts when the eSIM connects to a mobile network in its coverage area. If you install the eSIM outside of the coverage area, you can connect to a network when you arrive",
   otherInfo: "Restrictions apply to extended usage(over 91 days) in Turkey according to the local legislation",
   category: "Regional eSIMs",
-  subcategory: "Africa",
-  activationType: "Manual",
+  subcategory: "Africa",  
   delivery: "Email in 1 hour",
 },
 {
@@ -195,8 +185,7 @@ export const productData = [
   validityPolicy: "The validity period starts when the eSIM connects to a mobile network in its coverage area. If you install the eSIM outside of the coverage area, you can connect to a network when you arrive",
   otherInfo: "Restrictions apply to extended usage(over 91 days) in Turkey according to the local legislation",
   category: "Regional eSIMs",
-  subcategory: "Oceania",
-  activationType: "Instant QR",
+  subcategory: "Oceania",  
   delivery: "Instant Email",
 }
 ,
@@ -214,8 +203,7 @@ export const productData = [
     validityPolicy: "The validity period starts when the eSIM connects to a mobile network in its coverage area. If you install the eSIM outside of the coverage area, you can connect to a network when you arrive",
     otherInfo: "Restrictions apply to extended usage(over 91 days) in Turkey according to the local legislation",
     category: "Local eSIMs",
-    subcategory: "Middle East",
-    activationType: "Manual QR",
+    subcategory: "Middle East",    
     delivery: "Email in 2 hours",
   },
   {
@@ -232,8 +220,7 @@ export const productData = [
     validityPolicy: "The validity period starts when the eSIM connects to a mobile network in its coverage area. If you install the eSIM outside of the coverage area, you can connect to a network when you arrive",
     otherInfo: "Restrictions apply to extended usage(over 91 days) in Turkey according to the local legislation",
     category: "Global eSIMs",
-    subcategory: "Data",
-    activationType: "Instant QR",
+    subcategory: "Data",    
     delivery: "Instant Email",
   },
 ];
