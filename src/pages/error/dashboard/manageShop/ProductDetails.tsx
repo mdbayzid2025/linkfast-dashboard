@@ -15,7 +15,7 @@ const ProductDetails = ({ open, setOpen, product, title }: CustomModalProps) => 
   };
 
   if (!product) return null;
-  
+
   return (
     <Modal
       open={open}
@@ -61,47 +61,48 @@ const ProductDetails = ({ open, setOpen, product, title }: CustomModalProps) => 
         </div>
       </div>
       <div className="flex justify-between gap-5">
-        <div className="w-full bg-white p-4 overflow-y-scroll max-h-[300px]">
-          <h4 className='text-xl mb-5 font-medium'>Additional Information</h4>
-          <div className=" mb-3">
-            <p className='text-[#C0C0C0]'>Plan Type</p>
-            <p className='text-[#767676]'>{product?.planType}</p>
-          </div>
-          <div className=" mb-3">
-            <p className='text-[#C0C0C0]'>IP Routine</p>
-            <p className='text-[#767676]'>{product?.ipRoutine}</p>
-          </div>
-          <div className=" mb-3">
-            <p className='text-[#C0C0C0]'>TOP-UP-OPTION</p>
-            <p className='text-[#767676]'>{product?.topUpOption}</p>
-          </div>
-          <div className=" mb-3">
-            <p className='text-[#C0C0C0]'>VALIDITY POLICY</p>
-            <p className='text-[#767676]'>{product?.validityPolicy}</p>
-          </div>
-          <div className=" mb-3">
-            <p className='text-[#C0C0C0]'>OTHER INFO</p>
-            <p className='text-[#767676]'>{product?.otherInfo}</p>
-          </div>
+        <div         
+        className="w-full bg-white p-4 overflow-y-scroll max-h-[300px] scrollable-container">
+        <h4 className='text-xl mb-5 font-medium'>Additional Information</h4>
+        <div className=" mb-3">
+          <p className='text-[#C0C0C0]'>Plan Type</p>
+          <p className='text-[#767676]'>{product?.planType}</p>
+        </div>
+        <div className=" mb-3">
+          <p className='text-[#C0C0C0]'>IP Routine</p>
+          <p className='text-[#767676]'>{product?.ipRoutine}</p>
+        </div>
+        <div className=" mb-3">
+          <p className='text-[#C0C0C0]'>TOP-UP-OPTION</p>
+          <p className='text-[#767676]'>{product?.topUpOption}</p>
+        </div>
+        <div className=" mb-3">
+          <p className='text-[#C0C0C0]'>VALIDITY POLICY</p>
+          <p className='text-[#767676]'>{product?.validityPolicy}</p>
+        </div>
+        <div className=" mb-3">
+          <p className='text-[#C0C0C0]'>OTHER INFO</p>
+          <p className='text-[#767676]'>{product?.otherInfo}</p>
+        </div>
 
-        </div>
-        <div className="w-full bg-white p-4 max-h-[300px] overflow-y-scroll">
-          <h4 className='text-xl mb-5 font-medium'>Suppored Country</h4>
-          {
-            countries && countries.map(country =>
-              <div className="flex items-center gap-4 mb-3">
-                <img
-                  src={country.flag}
-                  alt={country.value}
-                  className="w-8 h-5 object-cover"
-                />
-                <span className='text-md'>{country.value}</span>
-              </div>
-            )
-          }
-        </div>
       </div>
-    </Modal>
+      <div className="w-full bg-white p-4 max-h-[300px] overflow-y-scroll scrollable-container">
+        <h4 className='text-xl mb-5 font-medium'>Suppored Country</h4>
+        {
+          countries && countries.map(country =>
+            <div className="flex items-center gap-4 mb-3">
+              <img
+                src={country.flag}
+                alt={country.value}
+                className="w-8 h-5 object-cover"
+              />
+              <span className='text-md'>{country.value}</span>
+            </div>
+          )
+        }
+      </div>
+    </div>
+    </Modal >
   );
 };
 
