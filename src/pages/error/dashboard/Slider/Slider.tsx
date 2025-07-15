@@ -7,7 +7,7 @@ import AddSliderModal from './AddSliderModal'
 import CustomDeleteModal from '../../../../components/shared/CustomDeleteModal'
 
 
-const Slider = () => {  
+const Slider = () => {
   const [open, setOpen] = useState(false);
   const [openConfirmModal, setOpenConfirmModal] = useState(false)
   const [editData, setEditData] = useState<any | null>(null);
@@ -36,16 +36,17 @@ const Slider = () => {
           <FaRegEdit
             onClick={() => { setOpen(true); setEditData(record) }}
             className="text-[#009A54] cursor-pointer" size={18} />
-          <FaRegTrashAlt onClick={() => setOpenConfirmModal(true)} className="text-red-600 cursor-pointer" size={18} />
-            <Tooltip title={record.status}>
+
+          <Tooltip title={record.status}>
             {(selectedNewsId == record.key || record.status == "active") ? <FaRegEye onClick={() => setSelectedSliderId(record.key)} size={18} className='text-green-600 cursor-pointer' /> : <FaRegEyeSlash onClick={() => setSelectedSliderId(record.key)} size={18} className='text-red-600 cursor-pointer' />}
           </Tooltip>
+          <FaRegTrashAlt onClick={() => setOpenConfirmModal(true)} className="text-red-600 cursor-pointer" size={18} />
         </div>
       ),
     },
   ]
 
-    const handleDelete = () => {
+  const handleDelete = () => {
     console.log("Product deleted!");
   };
 

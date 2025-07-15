@@ -7,17 +7,17 @@ import CustomDeleteModal from '../../../../components/shared/CustomDeleteModal'
 import AddHeaderNewsModal from './AddHeaderNewsModal'
 
 
-const HeaderNews = () => {  
+const HeaderNews = () => {
   const [openConfirmModal, setOpenConfirmModal] = useState(false)
   const [editData, setEditData] = useState<any | null>(null);
 
   const [open, setOpen] = useState(false);
   const [selectedNewsId, setSelectedNewsId] = useState("");
-  const [openActiveAll, setActiveAll]  = useState(false);
+  const [openActiveAll, setActiveAll] = useState(false);
 
   const tableComuln = [
     { title: "SL No", dataIndex: "key", key: "key" },
-    { title: "News", dataIndex: "news", key: "news" },   
+    { title: "News", dataIndex: "news", key: "news" },
     {
       title: "Action", dataIndex: "action",
       render: (_: any, record: any) => (
@@ -29,12 +29,11 @@ const HeaderNews = () => {
             className="text-[#009A54] cursor-pointer" size={18}
           />
 
-          <FaRegTrashAlt
-            onClick={() => setOpenConfirmModal(true)} className="text-red-600 cursor-pointer" size={18} />
-
           <Tooltip title={record.status}>
             {(selectedNewsId == record.key || record.status == "active") ? <FaRegEye onClick={() => setSelectedNewsId(record.key)} size={18} className='text-green-600 cursor-pointer' /> : <FaRegEyeSlash onClick={() => setSelectedNewsId(record.key)} size={18} className='text-red-600 cursor-pointer' />}
           </Tooltip>
+          <FaRegTrashAlt
+            onClick={() => setOpenConfirmModal(true)} className="text-red-600 cursor-pointer" size={18} />
         </div>
       ),
     },
@@ -50,11 +49,11 @@ const HeaderNews = () => {
         <h1 className='font-semibold text-2xl text-[#009A54]'>Header News</h1>
 
         <div className="flex items-center justify-end gap-5">
-          <Button onClick={()=>setActiveAll(!openActiveAll)} size='large' shape="round" 
-          className='flex items-center justify-center w-[140px]' 
-          style={{fontWeight: 600,}}
+          <Button onClick={() => setActiveAll(!openActiveAll)} size='large' shape="round"
+            className='flex items-center justify-center w-[140px]'
+            style={{ fontWeight: 600, }}
           >
-            {openActiveAll ? <FaRegEyeSlash size={24}/> : <FaRegEye size={24}/>}
+            {openActiveAll ? <FaRegEyeSlash size={24} /> : <FaRegEye size={24} />}
             {openActiveAll ? "Hide All" : "Active All"}
           </Button>
           <div className="relative">
@@ -87,7 +86,7 @@ const HeaderNews = () => {
 
       </div>
       {/* ------------ News Data Assign Below ------------ */}
-      <Table dataSource={newsData} columns={tableComuln} size="large" 
+      <Table dataSource={newsData} columns={tableComuln} size="large"
         pagination={{
           pageSize: 10,
         }}

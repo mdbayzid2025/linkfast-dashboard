@@ -37,10 +37,11 @@ const WhyUse = () => {
           <FaRegEdit
             onClick={() => { setOpen(true); setEditData(record) }}
             className="text-[#009A54] cursor-pointer" size={18} />
-          <FaRegTrashAlt onClick={() => setOpenConfirmModal(true)} className="text-red-600 cursor-pointer" size={18} />
+         
             <Tooltip title={record.status}>
             {(selectedNewsId == record.key || record.status == "active") ? <FaRegEye onClick={() => setSelectedSliderId(record.key)} size={18} className='text-green-600 cursor-pointer' /> : <FaRegEyeSlash onClick={() => setSelectedSliderId(record.key)} size={18} className='text-red-600 cursor-pointer' />}
           </Tooltip>
+           <FaRegTrashAlt onClick={() => setOpenConfirmModal(true)} className="text-red-600 cursor-pointer" size={18} />
         </div>
       ),
     },

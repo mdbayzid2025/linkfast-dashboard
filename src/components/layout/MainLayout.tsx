@@ -10,7 +10,7 @@ const MainLayout = () => {
       <Sidebar />
       <Layout>
         <HeaderDashboard />
-        <Content style={{margin: 24}} className='overflow-y-scroll'>
+        <Content  className='overflow-y-scroll m-2 md:m-6'>
           <Outlet />
         </Content>
       </Layout>

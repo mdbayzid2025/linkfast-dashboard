@@ -39,7 +39,7 @@ const DashboardStats = () => {
         },
     ]
     return (
-        <div className='grid grid-cols-4 gap-5 mb-4'>
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-5 mb-4'>
 
             {
                 statsData.map(item =>
