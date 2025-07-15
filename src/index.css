@@ -107,3 +107,14 @@ body {
   background-color: #009A54 !important;
   color: #fff !important;
 }
+
+
+
+/* ----------- Scroll; bar ---------- */
+.scrollable-container::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollable-container::-webkit-scrollbar-thumb {
+  background-color: #4b5563; /* gray-700 */
+  border-radius: 6px;
+}
